@@ -1,0 +1,2138 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="id">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Klinik Pratama Cita Sehat - Poli Umum Keluarga, Poli Gigi &amp; Poli KIA</title>
+<meta content="Klinik Pratama Cita Sehat menghadirkan pelayanan medis terpadu Poli Umum, Klinik Gigi, dan Poli Kesehatan Ibu &amp; Anak (KIA) dengan dokter profesional dan fasilitas bersih terpercaya." name="description"/>
+<!-- Open Graph Meta Tags -->
+<meta content="website" property="og:type"/>
+<meta content="Klinik Pratama Cita Sehat - Poli Umum, Poli Gigi &amp; Poli KIA" property="og:title"/>
+<meta content="Pelayanan kesehatan terpadu dan profesional Keluarga Anda. Melayani Poli Umum, Poli Gigi, dan Poli KIA." property="og:description"/>
+<meta content="images/01_logo_csf_transparent.png" property="og:image"/>
+<!-- Font: Albert Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Proxima Nova"', 'proxima-nova', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'sans-serif'],
+                        heading: ['"Proxima Nova"', 'proxima-nova', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'sans-serif'],
+                    },
+                    colors: {
+                        teal: {
+                            50: '#f0fdfa',
+                            100: '#ccfbf1',
+                            200: '#99f6e4',
+                            300: '#5eead4',
+                            400: '#2dd4bf',
+                            500: '#14b8a6',
+                            600: '#0d9488',
+                            700: '#0f766e',
+                            800: '#115e59',
+                            900: '#134e4a',
+                        },
+                        indigo: {
+                            50: '#eef2ff',
+                            100: '#e0e7ff',
+                            600: '#4f46e5',
+                            700: '#4338ca',
+                            800: '#3730a3',
+                        },
+                        emerald: {
+                            50: '#ecfdf5',
+                            100: '#d1fae5',
+                            600: '#059669',
+                            700: '#047857',
+                            800: '#065f46',
+                        },
+                        pink: {
+                            50: '#fdf2f8',
+                            100: '#fce7f3',
+                            500: '#ec4899',
+                            600: '#db2777',
+                            700: '#be185d',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        /* Custom Smooth Scroll Snapping Container */
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            
+            font-family: 'Albert Sans', sans-serif !important;
+            background-color: #e8f5e9;
+        }
+
+        * {
+            font-family: 'Albert Sans', sans-serif;
+        }
+
+        /* Hide summary native arrow */
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary {
+            list-style: none;
+        }
+
+        . {
+            height: 100vh;
+            overflow-y: scroll;
+            
+            scroll-behavior: smooth;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+
+        .::-webkit-scrollbar {
+            display: none;
+        }
+
+        . {
+            
+            
+            min-height: 100vh;
+        }
+
+        /* Transparent Seamless Navbar */
+        .glass-nav {
+            background: transparent;
+            border-bottom: none;
+        }
+
+        /* Seamless Infinite Running Text / Marquee */
+        @keyframes marqueeScroll {
+            0% {
+                transform: translateX(0%);
+            }
+
+            100% {
+                transform: translateX(-33.333333%);
+            }
+        }
+
+        .marquee-container {
+            display: flex;
+            width: max-content;
+            animation: marqueeScroll 22s linear infinite;
+        }
+
+        /* Testimonials Running to the Right (Ke Kanan) */
+        @keyframes marqueeToRight {
+            0% {
+                transform: translateX(-33.333333%);
+            }
+
+            100% {
+                transform: translateX(0%);
+            }
+        }
+
+        .marquee-track-right {
+            display: flex;
+            width: max-content;
+            animation: marqueeToRight 76s linear infinite;
+        }
+
+        /* Testimonials Running to the Left (Ke Kiri) */
+        @keyframes marqueeToLeft {
+            0% {
+                transform: translateX(0%);
+            }
+
+            100% {
+                transform: translateX(-33.333333%);
+            }
+        }
+
+        .marquee-track-left {
+            display: flex;
+            width: max-content;
+            animation: marqueeToLeft 76s linear infinite;
+        }
+
+        /* Scrolled Header & Hamburger Button Theme (Medvi Dark Green) */
+        #mainHeader {
+            transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        #mainHeader #brandTitle {
+            transition: color 0.3s ease;
+        }
+
+        #mainHeader #hamburgerBtn {
+            transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+        }
+
+        #mainHeader.scrolled-header {
+            background-color: rgba(255, 255, 255, 0.95) !important;
+            backdrop-filter: blur(12px) !important;
+            -webkit-backdrop-filter: blur(12px) !important;
+            border-bottom: 1px solid rgba(203, 213, 225, 0.85) !important;
+            box-shadow: 0 4px 20px -2px rgba(14, 56, 43, 0.08) !important;
+        }
+
+        #mainHeader.scrolled-header #brandTitle {
+            color: #0e382b !important;
+            text-shadow: none !important;
+        }
+
+        #mainHeader.scrolled-header #hamburgerBtn {
+            background-color: #0e382b !important;
+            border-color: #0e382b !important;
+            box-shadow: 0 6px 18px rgba(14, 56, 43, 0.35) !important;
+        }
+
+        #mainHeader.scrolled-header #hamburgerBtn:hover {
+            background-color: #144f3d !important;
+            border-color: #144f3d !important;
+            transform: scale(1.06) !important;
+        }
+
+        #mainHeader.scrolled-header #hamburgerBtn span {
+            background-color: #ffffff !important;
+        }
+
+        /* Hero Split Background (Top Light Green, Bottom White) */
+        #hero-overview {
+            background: linear-gradient(to bottom, #e8f5e9 68%, #ffffff 68%) !important;
+        }
+
+        @media (max-width: 639px) {
+            #hero-overview {
+                background: linear-gradient(to bottom, #e8f5e9 58%, #ffffff 58%) !important;
+            }
+        }
+
+        @keyframes custom-ping {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            75%,
+            100% {
+                transform: scale(2.2);
+                opacity: 0;
+            }
+        }
+
+        .animate-ping-slow {
+            animation: custom-ping 3s cubic-bezier(0, 0, 0.2, 1) infinite !important;
+        }
+    
+        @keyframes blinkCursor {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+        .footer-cursor {
+            font-weight: 200;
+            margin-left: 2px;
+            animation: blinkCursor 1s step-end infinite;
+        }
+    </style>
+<link as_="image" href="images/02_logo_klinik_baru.jpg" rel="preload"/><link as_="image" href="images/03_poli-umum.png" rel="preload"/><link as_="image" href="images/04_poli-gigi.png" rel="preload"/><link as_="image" href="images/05_poli-kia.png" rel="preload"/></head>
+<body class="text-slate-800 antialiased selection:bg-teal-700 selection:text-teal-100 bg-[#e8f5e9]">
+<!-- Top Fixed Navigation Header -->
+<header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white shadow-sm" id="mainHeader">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between sm:h-16 py-1">
+<!-- Brand Logo -->
+<a class="flex items-center gap-3.5 sm:gap-4 group" href="#hero-overview">
+<img alt="Logo Klinik Pratama Cita Sehat" class="w-auto object-contain transition-transform group-hover:scale-105 drop-shadow-sm h-8 sm:h-10 md:h-12" fetchpriority="high" src="images/02_logo_klinik_baru.jpg"/>
+<span class="hidden md:block font-extrabold tracking-tight transition-colors duration-300 text-[17px] sm:text-[18px] text-slate-600" id="brandTitle">Klinik Pratama Cita Sehat</span></a>
+<!-- Right Actions: Reservasi & Hamburger Menu Button -->
+<div class="flex items-center gap-3">
+    <button id="reservasiBtn" data-poli="Reservasi Umum" class="px-5 py-2 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm sm:text-base transition-all shadow-sm booking-trigger cursor-pointer">
+        Reservasi
+    </button>
+    <button id="hamburgerBtn" aria-label="Buka Menu Navigasi" class="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-slate-100 hover:bg-slate-200 flex flex-col items-center justify-center gap-1.5 transition-all cursor-pointer">
+        <span class="w-5 h-0.5 bg-slate-700 rounded-full transition-colors"></span>
+        <span class="w-5 h-0.5 bg-slate-700 rounded-full transition-colors"></span>
+    </button>
+</div>
+</div>
+</header>
+<!-- Slide-out Drawer Navigation Overlay -->
+<div class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300" id="drawerOverlay">
+<div class="fixed top-0 right-0 h-full w-full max-w-sm sm:max-w-md bg-white shadow-2xl flex flex-col justify-between p-6 sm:p-8 transform translate-x-full transition-transform duration-300 ease-out z-50 overflow-y-auto" id="drawerPanel">
+<!-- Drawer Top Header -->
+<div>
+<div class="flex items-center justify-between pb-5 border-b border-slate-100">
+<div class="flex items-center gap-3">
+<img alt="Logo" class="h-11 sm:h-12 w-auto object-contain" fetchpriority="high" src="images/02_logo_klinik_baru.jpg"/>
+<span class="font-extrabold text-[17px] sm:text-[22px] text-slate-900">Menu Navigasi</span>
+</div>
+<button aria-label="Tutup Menu" class="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-slate-100 hover:bg-slate-200 flex items-center justify-center text-slate-700 text-[22px] font-bold transition-all hover:scale-105" id="closeDrawerBtn">
+                        ×
+                    </button>
+</div>
+<!-- Navigation List in Drawer -->
+<nav class="mt-6 flex flex-col gap-3">
+<a class="drawer-link flex items-center gap-4 px-4 sm:px-5 py-3.5 sm:py-4 rounded-2xl hover:bg-slate-100 text-slate-800 hover:text-teal-800 transition-all group border border-transparent hover:border-teal-100" href="#hero-overview">
+<span class="w-12 h-12 rounded-2xl bg-teal-100 text-teal-700 flex items-center justify-center text-[22px] group-hover:scale-110 transition-transform shadow-xs">🏠</span>
+<div>
+<div class="font-extrabold text-[17px] sm:text-[17px] text-slate-900">Beranda</div>
+<div class="text-[15px] sm:text-[15px] text-slate-500">Halaman utama &amp; ringkasan layanan</div>
+</div>
+</a>
+<a class="drawer-link flex items-center gap-4 px-4 sm:px-5 py-3.5 sm:py-4 rounded-2xl hover:bg-indigo-50 text-slate-800 hover:text-indigo-800 transition-all group border border-transparent hover:border-indigo-100" href="#poli-umum">
+<span class="w-12 h-12 rounded-2xl bg-indigo-100 text-indigo-700 flex items-center justify-center text-[22px] group-hover:scale-110 transition-transform shadow-xs">🩺</span>
+<div>
+<div class="font-extrabold text-[17px] sm:text-[17px] text-slate-900">Poli Umum</div>
+<div class="text-[15px] sm:text-[15px] text-slate-500">Pemeriksaan dokter &amp; cek lab instan</div>
+</div>
+</a>
+<a class="drawer-link flex items-center gap-4 px-4 sm:px-5 py-3.5 sm:py-4 rounded-2xl hover:bg-slate-100 text-slate-800 hover:text-emerald-800 transition-all group border border-transparent hover:border-emerald-100" href="#poli-gigi">
+<span class="w-12 h-12 rounded-2xl bg-slate-200 text-emerald-700 flex items-center justify-center text-[22px] group-hover:scale-110 transition-transform shadow-xs">🦷</span>
+<div>
+<div class="font-extrabold text-[17px] sm:text-[17px] text-slate-900">Poli Gigi</div>
+<div class="text-[15px] sm:text-[15px] text-slate-500">Dental care, scaling, tambal &amp; cabut
+                            </div>
+</div>
+</a>
+<a class="drawer-link flex items-center gap-4 px-4 sm:px-5 py-3.5 sm:py-4 rounded-2xl hover:bg-slate-100 text-slate-800 hover:text-pink-800 transition-all group border border-transparent hover:border-pink-100" href="#poli-kia">
+<span class="w-12 h-12 rounded-2xl bg-slate-200 text-pink-700 flex items-center justify-center text-[22px] group-hover:scale-110 transition-transform shadow-xs">👶</span>
+<div>
+<div class="font-extrabold text-[17px] sm:text-[17px] text-slate-900">Poli KIA</div>
+<div class="text-[15px] sm:text-[15px] text-slate-500">Kesehatan ibu, anak &amp; imunisasi</div>
+</div>
+</a>
+<a class="drawer-link flex items-center gap-4 px-4 sm:px-5 py-3.5 sm:py-4 rounded-2xl bg-emerald-50 hover:bg-emerald-100 text-slate-800 hover:text-emerald-900 transition-all group border border-emerald-200" href="tarif.html">
+<span class="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center text-[22px] group-hover:scale-110 transition-transform shadow-xs">💰</span>
+<div>
+<div class="font-extrabold text-[17px] sm:text-[17px] text-slate-900">Tarif Layanan</div>
+<div class="text-[15px] sm:text-[15px] text-slate-500">Daftar tarif resmi &amp; transparansi biaya</div>
+</div>
+</a>
+<a class="drawer-link flex items-center gap-4 px-4 sm:px-5 py-3.5 sm:py-4 rounded-2xl hover:bg-teal-50 text-slate-800 hover:text-teal-900 transition-all group border border-transparent hover:border-teal-100" href="klinik.html">
+<span class="w-12 h-12 rounded-2xl bg-teal-100 text-teal-700 flex items-center justify-center text-[22px] group-hover:scale-110 transition-transform shadow-xs">🏥</span>
+<div>
+<div class="font-extrabold text-[17px] sm:text-[17px] text-slate-900">Detail Cabang Klinik</div>
+<div class="text-[15px] sm:text-[15px] text-slate-500">Profil lengkap 6 cabang klinik</div>
+</div>
+</a>
+<a class="drawer-link flex items-center gap-4 px-4 sm:px-5 py-3.5 sm:py-4 rounded-2xl hover:bg-slate-100 text-slate-800 hover:text-teal-800 transition-all group border border-transparent hover:border-teal-100" href="#sebaran-klinik">
+<span class="w-12 h-12 rounded-2xl bg-teal-100 text-teal-700 flex items-center justify-center text-[22px] group-hover:scale-110 transition-transform shadow-xs">🗺️</span>
+<div>
+<div class="font-extrabold text-[17px] sm:text-[17px] text-slate-900">Sebaran Klinik</div>
+<div class="text-[15px] sm:text-[15px] text-slate-500">6 cabang klinik di Jawa &amp; Sumatera</div>
+</div>
+</a>
+<a class="drawer-link flex items-center gap-4 px-4 sm:px-5 py-3.5 sm:py-4 rounded-2xl hover:bg-slate-100 text-slate-800 hover:text-teal-800 transition-all group border border-transparent hover:border-teal-100" href="#suasana-klinik">
+<span class="w-12 h-12 rounded-2xl bg-teal-100 text-teal-700 flex items-center justify-center text-[22px] group-hover:scale-110 transition-transform shadow-xs">🎬</span>
+<div>
+<div class="font-extrabold text-[17px] sm:text-[17px] text-slate-900">Suasana Klinik</div>
+<div class="text-[15px] sm:text-[15px] text-slate-500">Dokumentasi &amp; video suasana di klinik</div>
+</div>
+</a>
+<a class="drawer-link flex items-center gap-4 px-4 sm:px-5 py-3.5 sm:py-4 rounded-2xl hover:bg-slate-100 text-slate-800 hover:text-teal-800 transition-all group border border-transparent hover:border-teal-100" href="#cara-kerja">
+<span class="w-12 h-12 rounded-2xl bg-teal-100 text-teal-700 flex items-center justify-center text-[22px] group-hover:scale-110 transition-transform shadow-xs">⚙️</span>
+<div>
+<div class="font-extrabold text-[17px] sm:text-[17px] text-slate-900">Cara Kerja</div>
+<div class="text-[15px] sm:text-[15px] text-slate-500">Model operasional dari klinik ke komunitas
+                            </div>
+</div>
+</a>
+<a class="drawer-link flex items-center gap-4 px-4 sm:px-5 py-3.5 sm:py-4 rounded-2xl hover:bg-slate-100 text-slate-800 hover:text-teal-800 transition-all group border border-transparent hover:border-teal-100" href="#testimoni">
+<span class="w-12 h-12 rounded-2xl bg-teal-100 text-teal-700 flex items-center justify-center text-[22px] group-hover:scale-110 transition-transform shadow-xs">💬</span>
+<div>
+<div class="font-extrabold text-[17px] sm:text-[17px] text-slate-900">Testimoni Pasien</div>
+<div class="text-[15px] sm:text-[15px] text-slate-500">Ulasan &amp; pengalaman pasien nyata</div>
+</div>
+</a>
+<a class="drawer-link flex items-center gap-4 px-4 sm:px-5 py-3.5 sm:py-4 rounded-2xl hover:bg-slate-100 text-slate-800 hover:text-teal-800 transition-all group border border-transparent hover:border-teal-100" href="#faq">
+<span class="w-12 h-12 rounded-2xl bg-teal-100 text-teal-700 flex items-center justify-center text-[22px] group-hover:scale-110 transition-transform shadow-xs">❓</span>
+<div>
+<div class="font-extrabold text-[17px] sm:text-[17px] text-slate-900">FAQ</div>
+<div class="text-[15px] sm:text-[15px] text-slate-500">Tanya jawab seputar layanan &amp; misi kami
+                            </div>
+</div>
+</a>
+</nav>
+</div>
+<!-- Drawer Footer Info -->
+<div class="pt-6 border-t border-slate-100 flex flex-col gap-4 mt-6">
+<button class="w-full py-4 rounded-full bg-teal-600 hover:bg-teal-700 text-white font-extrabold text-[17px] shadow-lg shadow-teal-600/30 flex items-center justify-center gap-2.5 transition-all hover:scale-[1.02] active:scale-98" id="drawerBookingBtn">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24">
+<path d="M19 4H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"></path>
+<line x1="16" x2="16" y1="2" y2="6"></line>
+<line x1="8" x2="8" y1="2" y2="6"></line>
+<line x1="3" x2="21" y1="10" y2="10"></line>
+</svg>
+<span>Buat Janji Periksa</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Full-Height Snap Scroll Container -->
+<main class="" id="scrollContainer">
+<!-- ==========================================================================
+             HERO OVERVIEW SECTION (Inspired by MEDVi Dark Green Aesthetic)
+             ========================================================================== -->
+<section class="snap-section min-h-screen bg-[#e8f5e9] text-slate-800 relative flex flex-col justify-between overflow-hidden pt-36 lg:pt-44 pb-4 lg:pb-6" id="hero-overview">
+<div class="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 flex-1 flex flex-col justify-center text-center relative z-10 my-auto">
+<!-- Trust Pill Badge -->
+<!-- Big Headline with Emerald Accent -->
+<h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold tracking-tight text-slate-900 leading-[1.12] max-w-4xl mx-auto mb-5"><span class="block text-slate-900 tracking-tight text-4xl sm:text-5xl lg:text-7xl font-extrabold mb-2">#SehatBersama<br class="sm:hidden"/> <span class="text-[#72BE44]">Cita Sehat</span></span><span class="block mt-4 font-semibold text-slate-600 text-[20px] sm:text-[22px] lg:text-[26px] leading-relaxed">Klinik Cita Sehat adalah bagian dari Cita Sehat Foundation,<br class="hidden lg:block"/> NGO kesehatan terbesar di Indonesia</span></h1>
+<!-- Sub-description -->
+<p class="text-sm sm:text-base lg:text-lg text-slate-600 mx-auto leading-relaxed font-normal mb-8 max-w-3xl">Untuk setiap layanan yang kamu bayarkan di Klinik Cita Sehat, dananya digunakan juga untuk memberikan manfaat kesehatan yang lebih luas, bahkan jauh ke pelosok negeri. Karena semua orang bisa jatuh sakit, namun tidak semua orang punya akses untuk sehat.</p>
+<!-- 3 Quick Category Cards (Enlarged) -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-5 sm:gap-6 lg:gap-8 max-w-5xl mx-auto w-full pt-12 sm:pt-16 lg:pt-20">
+<!-- Card 1: Poli Umum -->
+<a class="group bg-indigo-50 sm:bg-white rounded-3xl p-3.5 sm:p-5 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-row sm:flex-col items-center sm:items-stretch justify-between text-left border border-slate-200/80 relative z-10 gap-4 sm:gap-0" href="#poli-umum">
+<div class="w-24 h-24 sm:w-full rounded-2xl relative flex-shrink-0 flex items-center justify-center overflow-visible bg-emerald-50 sm:h-36 lg:h-40">
+<img alt="Poli Umum" class="absolute object-contain object-bottom origin-bottom group-hover:scale-[1.03] transition-transform duration-500 z-10 w-[150%] sm:w-[145%] max-h-[160%] bottom-0" fetchpriority="high" src="images/03_poli-umum.png"/>
+</div>
+<div class="flex-1 flex items-center justify-between pt-0 sm:pt-4 px-0 sm:px-1 w-full gap-2">
+<span class="text-slate-900 font-extrabold text-lg sm:text-xl lg:text-2xl group-hover:text-teal-700 transition-colors tracking-tight">Poli
+                                Umum</span>
+<span class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-slate-100 group-hover:bg-teal-600 group-hover:text-white flex items-center justify-center text-slate-700 font-bold text-xs sm:text-sm transition-colors flex-shrink-0">→</span>
+</div>
+</a>
+<!-- Card 2: Poli Gigi -->
+<a class="group bg-emerald-50 sm:bg-white rounded-3xl p-3.5 sm:p-5 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-row sm:flex-col items-center sm:items-stretch justify-between text-left border border-slate-200/80 relative z-10 gap-4 sm:gap-0" href="#poli-gigi">
+<div class="w-24 h-24 sm:w-full rounded-2xl relative flex-shrink-0 flex items-center justify-center overflow-visible bg-sky-50 sm:h-36 lg:h-40">
+<img alt="Poli Gigi" class="absolute object-contain object-bottom origin-bottom group-hover:scale-[1.03] transition-transform duration-500 z-10 w-[150%] sm:w-[145%] max-h-[160%] bottom-0" fetchpriority="high" src="images/04_poli-gigi.png"/>
+</div>
+<div class="flex-1 flex items-center justify-between pt-0 sm:pt-4 px-0 sm:px-1 w-full gap-2">
+<span class="text-slate-900 font-extrabold text-lg sm:text-xl lg:text-2xl group-hover:text-sky-700 transition-colors tracking-tight">Poli
+                                Gigi</span>
+<span class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-slate-100 group-hover:bg-sky-600 group-hover:text-white flex items-center justify-center text-slate-700 font-bold text-xs sm:text-sm transition-colors flex-shrink-0">→</span>
+</div>
+</a>
+<!-- Card 3: Poli KIA -->
+<a class="group bg-pink-50 sm:bg-white rounded-3xl p-3.5 sm:p-5 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-row sm:flex-col items-center sm:items-stretch justify-between text-left border border-slate-200/80 relative z-10 gap-4 sm:gap-0" href="#poli-kia">
+<div class="w-24 h-24 sm:w-full rounded-2xl relative flex-shrink-0 flex items-center justify-center overflow-visible bg-pink-50 sm:h-36 lg:h-40">
+<img alt="Poli KIA" class="absolute object-contain object-bottom origin-bottom group-hover:scale-[1.03] transition-transform duration-500 z-10 w-[150%] sm:w-[145%] max-h-[160%] bottom-0" fetchpriority="high" src="images/05_poli-kia.png"/>
+</div>
+<div class="flex-1 flex items-center justify-between pt-0 sm:pt-4 px-0 sm:px-1 w-full gap-2">
+<span class="text-slate-900 font-extrabold text-lg sm:text-xl lg:text-2xl group-hover:text-pink-700 transition-colors tracking-tight">Poli
+                                KIA</span>
+<span class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-slate-100 group-hover:bg-pink-600 group-hover:text-white flex items-center justify-center text-slate-700 font-bold text-xs sm:text-sm transition-colors flex-shrink-0">→</span>
+</div>
+</a>
+</div>
+</div>
+<!-- Running Text Marquee Banner at Bottom of Hero Section -->
+<div class="w-full bg-white border-t border-slate-200/80 py-3 sm:py-3.5 overflow-hidden relative z-20 shadow-xs mt-12 lg:mt-16">
+<div class="marquee-container flex items-center whitespace-nowrap text-xs sm:text-sm font-bold tracking-wider text-slate-800 text-[21px] sm:text-[21px]">
+<!-- Repeated block 1 -->
+<div class="flex items-center">
+<span class="mx-3">Harga Terjangkau</span>
+<span class="text-teal-600 font-bold mx-3">|</span>
+<span class="mx-3">Tenaga Medis Profesional</span>
+<span class="text-teal-600 font-bold mx-3">|</span>
+<span class="mx-3">Pelayanan Kesehatan Terpadu</span>
+<span class="text-teal-600 font-bold mx-3">|</span>
+<span class="mx-3">Fasilitas Nyaman</span>
+<span class="text-teal-600 font-bold mx-3">|</span>
+<span class="mx-3">Lokasi mudah di akses</span>
+<span class="text-teal-600 font-bold mx-3">|</span>
+</div>
+<!-- Repeated block 2 -->
+<div aria-hidden="true" class="flex items-center">
+<span class="mx-3">Harga Terjangkau</span>
+<span class="text-teal-600 font-bold mx-3">|</span>
+<span class="mx-3">Tenaga Medis Profesional</span>
+<span class="text-teal-600 font-bold mx-3">|</span>
+<span class="mx-3">Pelayanan Kesehatan Terpadu</span>
+<span class="text-teal-600 font-bold mx-3">|</span>
+<span class="mx-3">Fasilitas Nyaman</span>
+<span class="text-teal-600 font-bold mx-3">|</span>
+<span class="mx-3">Lokasi mudah di akses</span>
+<span class="text-teal-600 font-bold mx-3">|</span>
+</div>
+<!-- Repeated block 3 -->
+<div aria-hidden="true" class="flex items-center">
+<span class="mx-3">Harga Terjangkau</span>
+<span class="text-teal-600 font-bold mx-3">|</span>
+<span class="mx-3">Tenaga Medis Profesional</span>
+<span class="text-teal-600 font-bold mx-3">|</span>
+<span class="mx-3">Pelayanan Kesehatan Terpadu</span>
+<span class="text-teal-600 font-bold mx-3">|</span>
+<span class="mx-3">Fasilitas Nyaman</span>
+<span class="text-teal-600 font-bold mx-3">|</span>
+<span class="mx-3">Lokasi mudah di akses</span>
+<span class="text-teal-600 font-bold mx-3">|</span>
+</div>
+</div>
+</div>
+</section>
+<!-- ==========================================================================
+             SECTION 1: POLI UMUM
+             Layout: Image on Left (60% width), Text on Right (40% width), White BG
+             ========================================================================== -->
+<section class="min- relative flex items-center py-24 lg:py-36" id="poli-umum" style="background: linear-gradient(to right, #ffffff, rgba(236, 253, 245, 0.3), #ffffff);">
+<div class="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 h-full">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start min-h-[calc(100vh-6rem)]">
+<!-- 1. Heading & Description Column (Renders 1st on mobile, sits top-right on desktop) -->
+<div class="order-1 lg:order-none lg:col-span-7 lg:col-start-6 lg:row-start-1 lg:row-end-2 flex flex-col justify-center space-y-4 lg:space-y-6 text-left order-1 lg:order-none order-1 lg:order-none">
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-emerald-200/80 w-fit bg-emerald-50">
+<span class="text-emerald-700 text-[15px] font-extrabold uppercase tracking-wider">Layanan Medis
+                                Utama</span>
+</div>
+<!-- H2 Header -->
+<h2 class="text-[32px] sm:text-[32px] lg:text-[54px] font-extrabold text-slate-900 tracking-tight leading-tight">
+                            Poli Umum Keluarga
+                        </h2>
+<!-- Paragraph -->
+<p class="text-[17px] sm:text-[17px] text-slate-600 leading-relaxed">
+                            Kapanpun si kecil demam atau Ayah butuh cek kesehatan rutin, dokter umum kami siap memberikan diagnosa cepat dan penanganan yang nyaman untuk seluruh anggota keluarga.
+                        </p>
+</div>
+<!-- 2. Left Column: Vertical Service Card (Renders 2nd on mobile, sits left on desktop) -->
+<div class="order-2 lg:order-none lg:col-span-5 lg:col-start-1 lg:row-start-1 lg:row-end-3 flex flex-col w-full max-w-md mx-auto lg:mx-0 text-left overflow-visible order-2 lg:order-none order-2 lg:order-none">
+<!-- Blok Atas: Image Container -->
+<div class="relative rounded-3xl sm:px-12 flex justify-center items-center overflow-visible mt-12 mb-8 h-80 sm:h-96 mt-16 flex items-end justify-center overflow-visible"><div class="absolute bottom-0 left-0 right-0 rounded-3xl z-0 bg-emerald-100 h-[90%]"></div>
+<!-- Stethoscope and bottle with vertical negative margins and drop shadow for a 3D pop-out effect -->
+<img alt="Pasien Poli Umum" class="max-w-none object-contain mx-auto pointer-events-none transition-transform duration-500 absolute bottom-0 z-10 w-[65%] sm:w-[75%] lg:w-[75%]" fetchpriority="high" src="images/03_poli-umum.png"/>
+</div>
+<!-- Blok Bawah: Text & List Container -->
+<div class="mt-8 flex flex-col">
+<h3 class="font-bold text-[17px] text-slate-900">Layanan yang Tersedia</h3>
+<!-- Vertical List -->
+<ul class="flex flex-col space-y-3 mt-4 text-[15px] sm:text-[17px] text-slate-700 font-medium">
+<li class="flex items-center gap-3">
+<span class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center font-bold bg-emerald-600 text-white">✓</span>
+<span>Pemeriksaan fisik dan konsultasi medis</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center font-bold bg-emerald-600 text-white">✓</span>
+<span>Layanan keperawatan dan tindakan dasar</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center font-bold bg-emerald-600 text-white">✓</span>
+<span>Pemeriksaan penunjang laboratorium ringan</span>
+</li>
+</ul>
+<!-- CTA Button at the very bottom -->
+<div class="mt-8">
+<button class="booking-trigger inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-[17px] transition-colors duration-300 w-full sm:w-[380px]" data-poli="Poli Umum">
+<span>Daftar Perawatan Umum</span>
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24">
+<path d="M5 12h14M12 5l7 7-7 7"></path>
+</svg>
+</button>
+</div>
+</div>
+</div>
+<!-- 3. Staggered Images Column (Renders 3rd on mobile, sits bottom-right on desktop) -->
+<div class="order-3 lg:order-none lg:col-span-7 lg:col-start-6 lg:row-start-2 lg:row-end-3 w-full overflow-visible order-3 lg:order-none order-3 lg:order-none">
+<div class="grid grid-cols-2 gap-4 sm:gap-6 pt-4 sm:pt-6 overflow-visible">
+<!-- Image 2: Centerpiece 3:4 (Doctor Portrait) -->
+<div class="flex flex-col justify-start">
+<div class="relative rounded-3xl overflow-hidden border border-slate-200/60 aspect-[3/4] group bg-slate-100/50 flex items-center justify-center bg-emerald-50">
+<img alt="Pemeriksaan Poli Umum" class="w-full h-full object-cover" loading="lazy" src="images/06_placeholder_umum_1.jpg"/></div>
+</div>
+<!-- Image 3: Ramping/Checkup 3:4 Staggered (Right, Shifted Down) -->
+<div class="flex flex-col justify-start mt-6 sm:mt-8">
+<div class="relative rounded-3xl overflow-hidden border border-slate-200/60 aspect-[3/4] group bg-orange-50/50 bg-slate-200 flex items-center justify-center">
+<img alt="Ruang Tunggu Klinik" class="w-full h-full object-cover" loading="lazy" src="images/07_placeholder_umum_2.jpg"/></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==========================================================================
+             SECTION 2: POLI GIGI
+             Layout: Text on Left (40% width), Image on Right (60% width), Light Gray BG
+             ========================================================================== -->
+<!-- ==========================================================================
+             SECTION 2: POLI GIGI
+             Layout: Alternating (Text/Gallery on Left, Vertical Service Card on Right), Pure White BG
+             ========================================================================== -->
+<section class="min- relative flex items-center border-t border-slate-200/60 overflow-visible py-24 lg:py-36" id="poli-gigi" style="background: linear-gradient(to right, #ffffff, rgba(240, 249, 255, 0.4), #ffffff);">
+<div class="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 h-full overflow-visible">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start min-h-[calc(100vh-6rem)] overflow-visible">
+<!-- Left Column: Heading, Description & Staggered Gallery (7 of 12 cols) -->
+<!-- Sibling 1: Heading & Description (Left, Top) -->
+<div class="order-1 lg:order-none lg:col-span-7 lg:col-start-1 lg:row-start-1 lg:row-end-2 flex flex-col justify-center space-y-4 lg:space-y-6 text-left sm:text-right items-start sm:items-end order-1 lg:order-none order-1 lg:order-none">
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-50 border border-sky-200/80 w-fit">
+<span class="text-sky-700 text-[15px] font-extrabold uppercase tracking-wider">Dental Care
+                                &amp; Estetika Gigi</span>
+</div>
+<!-- H2 Header -->
+<h2 class="text-[32px] sm:text-[32px] lg:text-[54px] font-extrabold text-slate-900 tracking-tight leading-tight">Poli Gigi</h2>
+<!-- Paragraph -->
+<p class="text-[17px] sm:text-[17px] text-slate-600 leading-relaxed">
+                            Senyum menawan berawal dari gigi yang sehat lho! Kami hadirkan pemeriksaan gigi anak yang super ramah, hingga perawatan estetika dan scaling sebagai <em>self-reward</em> Anda setelah lelahnya rutinitas harian.
+                        </p>
+</div>
+<!-- Right Column: Vertical Service Card (5 of 12 cols, spanning row 1 & 2) -->
+<!-- Sibling 2: Vertical Service Card (Right) -->
+<div class="order-2 lg:order-none lg:col-span-5 lg:col-start-8 lg:row-start-1 lg:row-end-3 flex flex-col w-full max-w-md mx-auto lg:mx-0 text-left overflow-visible order-2 lg:order-none order-2 lg:order-none">
+<!-- Blok Atas (Image Container with 3D Pop-Out Effect) -->
+<div class="relative rounded-3xl flex justify-center items-center overflow-visible mt-10 mb-8 sm:px-12 h-80 sm:h-96 sm:mt-16 flex items-end justify-center overflow-visible"><div class="absolute bottom-0 left-0 right-0 h-[70%] rounded-3xl z-0 bg-sky-100"></div>
+<img alt="Pasien Poli Gigi" class="max-w-none object-contain mx-auto pointer-events-none transition-transform duration-500 absolute bottom-0 z-10 w-[65%] sm:w-[75%] lg:w-[75%]" fetchpriority="high" src="images/04_poli-gigi.png"/></div>
+<!-- Blok Bawah (Text & List Container) -->
+<div class="mt-8 flex flex-col">
+<h3 class="font-bold text-[17px] text-slate-900 tracking-tight">Layanan yang Tersedia</h3>
+<ul class="flex flex-col space-y-3 mt-4 text-[15px] sm:text-[17px] text-slate-700 font-medium">
+<li class="flex items-center gap-3">
+<span class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center font-bold bg-sky-600 text-white">✓</span>
+<span>Konsultasi dan pemeriksaan kesehatan gigi</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center font-bold bg-sky-600 text-white">✓</span>
+<span>Perawatan kebersihan dan estetika gigi</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center font-bold bg-sky-600 text-white">✓</span>
+<span>Tindakan medis dan perawatan akar gigi</span>
+</li>
+</ul>
+<!-- Button (Teal colored) -->
+<div class="pt-6">
+<button class="booking-trigger inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-sky-600 hover:bg-sky-700 text-white font-bold text-[17px] transition-colors duration-300 w-full sm:w-[380px]" data-poli="Poli Gigi">
+<span>Daftar Perawatan Gigi</span>
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24">
+<path d="M5 12h14M12 5l7 7-7 7"></path>
+</svg>
+</button>
+</div>
+</div>
+</div>
+<!-- Left Column, Row 2: Staggered Gallery Images (7 of 12 cols) -->
+<!-- Sibling 3: Staggered Gallery (Left, Bottom) -->
+<div class="order-3 lg:order-none lg:col-span-7 lg:col-start-1 lg:row-start-2 lg:row-end-3 w-full overflow-visible order-3 lg:order-none order-3 lg:order-none">
+<div class="grid grid-cols-2 gap-4 sm:gap-6 pt-4 sm:pt-6 overflow-visible">
+<!-- Card 1: 3:4 aspect centerpiece, normal height -->
+<div class="flex flex-col justify-start">
+<div class="relative rounded-3xl overflow-hidden aspect-[3/4] bg-sky-50/50 border border-sky-100/30 group flex items-center justify-center bg-sky-50">
+<img alt="Perawatan Gigi" class="w-full h-full object-cover" loading="lazy" src="images/08_placeholder_gigi_1.jpg"/></div>
+</div>
+<!-- Card 2: 3:4 aspect detail, shifted down for staggered effect -->
+<div class="flex flex-col justify-start mt-6 sm:mt-8">
+<div class="relative rounded-3xl overflow-hidden aspect-[3/4] bg-slate-100/50 border border-emerald-100/30 group flex items-center justify-center bg-sky-50">
+<img alt="Alat Dental Modern" class="w-full h-full object-cover" loading="lazy" src="images/09_placeholder_gigi_2.jpg"/></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==========================================================================
+             SECTION 3: POLI KIA (Kesehatan Ibu & Anak)
+             Layout: Same as Poli Umum (Card on Left, Text/Gallery on Right), Pure White BG
+             ========================================================================== -->
+<section class="min- relative flex items-center border-t border-slate-200/60 overflow-visible py-24 lg:py-36" id="poli-kia" style="background: linear-gradient(to right, #ffffff, rgba(253, 242, 248, 0.4), #ffffff);">
+<div class="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 h-full overflow-visible">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start min-h-[calc(100vh-6rem)] overflow-visible">
+<!-- Left Column: Vertical Service Card (5 of 12 cols, spanning row 1 & 2) -->
+<!-- Sibling 2: Vertical Service Card (Left) -->
+<div class="order-2 lg:order-none lg:col-span-5 lg:col-start-1 lg:row-start-1 lg:row-end-3 flex flex-col w-full max-w-md mx-auto lg:mx-0 text-left overflow-visible order-2 lg:order-none order-2 lg:order-none">
+<!-- Blok Atas (Image Container with 3D Pop-Out Effect) -->
+<div class="relative rounded-3xl w-full max-w-[280px] sm:max-w-sm mx-auto flex justify-center overflow-visible mt-16 mb-8 h-80 sm:h-96 flex items-end justify-center"><div class="absolute bottom-0 left-0 right-0 rounded-3xl z-0 bg-pink-100 h-[70%]"></div>
+<!-- Image absolute to bottom -->
+<img alt="Dokter Poli KIA" class="absolute bottom-0 max-w-none object-contain object-bottom origin-bottom pointer-events-none z-10 w-[94%] sm:w-[101%] lg:w-[81%]" fetchpriority="high" src="images/05_poli-kia.png"/>
+</div>
+<!-- Blok Bawah (Text & List Container) -->
+<div class="mt-8 flex flex-col">
+<h3 class="font-bold text-[17px] text-slate-900 tracking-tight">Layanan yang Tersedia</h3>
+<ul class="flex flex-col space-y-3 mt-4 text-[15px] sm:text-[17px] text-slate-700 font-medium">
+<li class="flex items-center gap-3">
+<span class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center font-bold bg-pink-600 text-white">✓</span>
+<span>Pemeriksaan dan konsultasi kehamilan</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center font-bold bg-pink-600 text-white">✓</span>
+<span>Layanan imunisasi dan vaksinasi anak</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center font-bold bg-pink-600 text-white">✓</span>
+<span>Konsultasi dan pelayanan keluarga berencana</span>
+</li>
+</ul>
+<!-- Button (Pink colored) -->
+<div class="pt-6">
+<button class="booking-trigger inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-pink-600 hover:bg-pink-700 text-white font-bold text-[17px] transition-colors duration-300 w-full sm:w-[380px]" data-poli="Poli KIA">
+<span>Daftar Perawatan Ibu dan Anak</span>
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24">
+<path d="M5 12h14M12 5l7 7-7 7"></path>
+</svg>
+</button>
+</div>
+</div>
+</div>
+<!-- Right Column: Heading, Description & Staggered Gallery (7 of 12 cols) -->
+<!-- Sibling 1: Heading & Description (Right, Top) -->
+<div class="order-1 lg:order-none lg:col-span-7 lg:col-start-6 lg:row-start-1 lg:row-end-2 flex flex-col justify-center space-y-4 lg:space-y-6 text-left order-1 lg:order-none order-1 lg:order-none">
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-pink-200/80 w-fit bg-pink-50">
+<span class="text-pink-700 text-[15px] font-extrabold uppercase tracking-wider">Kesehatan Ibu
+                                &amp; Buah Hati</span>
+</div>
+<!-- H2 Header -->
+<h2 class="text-[32px] sm:text-[32px] lg:text-[54px] font-extrabold text-slate-900 tracking-tight leading-tight">
+                            Poli Kesehatan Ibu &amp; Anak
+                        </h2>
+<!-- Paragraph -->
+<p class="text-[17px] sm:text-[17px] text-slate-600 leading-relaxed">
+                            Pemeriksaan kandungan, imunisasi anak, konsultasi program KB, dan tumbuh kembang balita
+                            dengan pendekatan penuh kasih sayang oleh bidan dan dokter ahli.
+                        </p>
+</div>
+<!-- Right Column, Row 2: Staggered Gallery Images (7 of 12 cols) -->
+<!-- Sibling 3: Staggered Gallery (Right, Bottom) -->
+<div class="order-3 lg:order-none lg:col-span-7 lg:col-start-6 lg:row-start-2 lg:row-end-3 w-full overflow-visible order-3 lg:order-none order-3 lg:order-none">
+<div class="grid grid-cols-2 gap-4 sm:gap-6 pt-4 sm:pt-6 overflow-visible">
+<!-- Card 1: 3:4 aspect centerpiece, normal height -->
+<div class="flex flex-col justify-start">
+<div class="relative rounded-3xl overflow-hidden aspect-[3/4] bg-slate-100/50 border border-pink-100/30 group bg-slate-200 flex items-center justify-center">
+<img alt="Pemeriksaan Ibu Hamil" class="w-full h-full object-cover" loading="lazy" src="images/10_placeholder_kia_1.jpg"/></div>
+</div>
+<!-- Card 2: 3:4 aspect detail, shifted down for staggered effect -->
+<div class="flex flex-col justify-start mt-6 sm:mt-8">
+<div class="relative rounded-3xl overflow-hidden aspect-[3/4] bg-slate-100/50 border border-pink-100/30 group bg-slate-200 flex items-center justify-center">
+<img alt="Ibu dan Bayi Baru Lahir" class="w-full h-full object-cover" loading="lazy" src="images/11_placeholder_kia_2.jpg"/></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==========================================================================
+             SECTION: SEBARAN KLINIK CITA SEHAT
+             ========================================================================== -->
+<section class="min- bg-white relative flex flex-col justify-between pt-20 pb-10 lg:pt-24 lg:pb-12 border-t border-slate-200/60 overflow-hidden" id="sebaran-klinik">
+<div class="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 flex-1 flex flex-col justify-center text-center my-auto">
+<!-- Interactive Image Presentation Container with Hotspots & Hover Effect -->
+<div class="relative max-w-5xl mx-auto w-full group/map">
+<!-- Ambient Glow backdrop on hover -->
+<!-- Main Card Frame -->
+<div class="relative transition-all duration-500 overflow-hidden">
+<!-- Map Wrapper with Exact 16:9 Aspect Ratio matching assets/images/sebaran_klinik.jpg -->
+<h2 class="text-[28px] sm:text-[36px] font-extrabold text-slate-900 text-center mb-8">Jaringan Klinik Cita Sehat</h2><div class="relative w-full aspect-[16/9] max-w-[960px] mx-auto select-none flex items-center justify-center">
+<!-- Base Map Image -->
+<img alt="Peta Sebaran Klinik Cita Sehat di Indonesia - Medan, Pekanbaru, Jakarta, Semarang, Yogyakarta, Surabaya" class="w-full h-full object-contain pointer-events-none select-none transition-transform duration-700 ease-out" loading="lazy" src="images/12_sebaran_klinik.jpg"/>
+<!-- HOTSPOT PIN 1: MEDAN (Sumatera Utara) -->
+<div class="clinic-hotspot absolute -translate-x-1/2 -translate-y-1/2 cursor-pointer z-30 group/pin" data-city="medan" style="left: 20%; top: 38%;">
+<!-- Glowing radar wave -->
+<span class="hotspot-ping absolute -inset-2.5 sm:-inset-3.5 rounded-full bg-emerald-400/40 animate-ping-slow pointer-events-none group-hover/pin:scale-175 group-hover/pin:bg-emerald-400/80 transition-all duration-300"></span>
+<span class="hotspot-glow absolute -inset-1.5 sm:-inset-2 rounded-full bg-slate-1000/40 blur-xs group-hover/pin:bg-emerald-400/80 group-hover/pin:blur-sm transition-all duration-300"></span>
+<!-- Central Core Dot -->
+<div class="hotspot-core relative w-3.5 h-3.5 sm:w-4.5 sm:h-4.5 rounded-full bg-emerald-600 border-2 border-white shadow-lg flex items-center justify-center transition-all duration-300 group-hover/pin:scale-150 group-hover/pin:bg-emerald-400 group-hover/pin:ring-4 group-hover/pin:ring-emerald-300/60 group-hover/pin:shadow-[0_0_25px_rgba(16,185,129,1)]">
+<span class="w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full bg-white animate-pulse"></span>
+</div>
+<!-- Tooltip Card -->
+<div class="hotspot-tooltip absolute bottom-full left-1/2 -translate-x-1/2 mb-3.5 w-52 sm:w-60 bg-white/95 backdrop-blur-md text-slate-900 text-left p-3.5 rounded-2xl shadow-2xl border border-slate-200 opacity-0 translate-y-2 pointer-events-none group-hover/pin:pointer-events-auto group-hover/pin:opacity-100 group-hover/pin:translate-y-0 transition-all duration-300 z-40">
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="font-bold text-[15px] text-emerald-300 flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping-slow"></span>
+                                            Klinik Cita Sehat
+                                        </span>
+</div>
+<div class="font-extrabold text-[15px] sm:text-[17px] text-slate-800">Klinik Medan</div>
+<div class="text-[11px] text-slate-500 mt-0.5 leading-snug">Sumatera Utara •
+                                        Layanan Terpadu Poli Umum, Gigi &amp; KIA</div>
+<div class="absolute top-full left-1/2 -translate-x-1/2 -mt-1 border-4 border-transparent border-t-white/95">
+</div>
+</div>
+</div>
+<!-- HOTSPOT PIN 2: PEKANBARU (Riau) -->
+<div class="clinic-hotspot absolute -translate-x-1/2 -translate-y-1/2 cursor-pointer z-30 group/pin" data-city="pekanbaru" style="left: 25%; top: 45%;">
+<span class="hotspot-ping absolute -inset-2.5 sm:-inset-3.5 rounded-full bg-emerald-400/40 animate-ping-slow pointer-events-none group-hover/pin:scale-175 group-hover/pin:bg-emerald-400/80 transition-all duration-300"></span>
+<span class="hotspot-glow absolute -inset-1.5 sm:-inset-2 rounded-full bg-slate-1000/40 blur-xs group-hover/pin:bg-emerald-400/80 group-hover/pin:blur-sm transition-all duration-300"></span>
+<div class="hotspot-core relative w-3.5 h-3.5 sm:w-4.5 sm:h-4.5 rounded-full bg-emerald-600 border-2 border-white shadow-lg flex items-center justify-center transition-all duration-300 group-hover/pin:scale-150 group-hover/pin:bg-emerald-400 group-hover/pin:ring-4 group-hover/pin:ring-emerald-300/60 group-hover/pin:shadow-[0_0_25px_rgba(16,185,129,1)]">
+<span class="w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full bg-white animate-pulse"></span>
+</div>
+<div class="hotspot-tooltip absolute bottom-full left-1/2 -translate-x-1/2 mb-3.5 w-52 sm:w-60 bg-white/95 backdrop-blur-md text-slate-900 text-left p-3.5 rounded-2xl shadow-2xl border border-slate-200 opacity-0 translate-y-2 pointer-events-none group-hover/pin:pointer-events-auto group-hover/pin:opacity-100 group-hover/pin:translate-y-0 transition-all duration-300 z-40">
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="font-bold text-[15px] text-emerald-300 flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping-slow"></span>
+                                            Klinik Cita Sehat
+                                        </span>
+</div>
+<div class="font-extrabold text-[15px] sm:text-[17px] text-slate-800">Klinik Pekanbaru</div>
+<div class="text-[11px] text-slate-500 mt-0.5 leading-snug">Riau • Layanan
+                                        Terpadu Poli Umum, Gigi &amp; KIA</div>
+<div class="absolute top-full left-1/2 -translate-x-1/2 -mt-1 border-4 border-transparent border-t-white/95">
+</div>
+</div>
+</div>
+<!-- HOTSPOT PIN 3: JAKARTA (DKI Jakarta) -->
+<div class="clinic-hotspot absolute -translate-x-1/2 -translate-y-1/2 cursor-pointer z-30 group/pin" data-city="jakarta" style="left: 32%; top: 66%;">
+<span class="hotspot-ping absolute -inset-2.5 sm:-inset-3.5 rounded-full bg-emerald-400/40 animate-ping-slow pointer-events-none group-hover/pin:scale-175 group-hover/pin:bg-emerald-400/80 transition-all duration-300"></span>
+<span class="hotspot-glow absolute -inset-1.5 sm:-inset-2 rounded-full bg-slate-1000/40 blur-xs group-hover/pin:bg-emerald-400/80 group-hover/pin:blur-sm transition-all duration-300"></span>
+<div class="hotspot-core relative w-3.5 h-3.5 sm:w-4.5 sm:h-4.5 rounded-full bg-emerald-600 border-2 border-white shadow-lg flex items-center justify-center transition-all duration-300 group-hover/pin:scale-150 group-hover/pin:bg-emerald-400 group-hover/pin:ring-4 group-hover/pin:ring-emerald-300/60 group-hover/pin:shadow-[0_0_25px_rgba(16,185,129,1)]">
+<span class="w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full bg-white animate-pulse"></span>
+</div>
+<div class="hotspot-tooltip absolute bottom-full left-1/2 -translate-x-1/2 mb-3.5 w-52 sm:w-60 bg-white/95 backdrop-blur-md text-slate-900 text-left p-3.5 rounded-2xl shadow-2xl border border-slate-200 opacity-0 translate-y-2 pointer-events-none group-hover/pin:pointer-events-auto group-hover/pin:opacity-100 group-hover/pin:translate-y-0 transition-all duration-300 z-40">
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="font-bold text-[15px] text-emerald-300 flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping-slow"></span>
+                                            Klinik Cita Sehat
+                                        </span>
+</div>
+<div class="font-extrabold text-[15px] sm:text-[17px] text-slate-800">Klinik Jakarta
+                                    </div>
+<div class="text-[11px] text-slate-500 mt-0.5 leading-snug">DKI Jakarta •
+                                        Layanan Terpadu Poli Umum, Gigi &amp; KIA</div>
+<div class="absolute top-full left-1/2 -translate-x-1/2 -mt-1 border-4 border-transparent border-t-white/95">
+</div>
+</div>
+</div>
+<!-- HOTSPOT PIN 4: YOGYAKARTA (DI Yogyakarta) -->
+<div class="clinic-hotspot absolute -translate-x-1/2 -translate-y-1/2 cursor-pointer z-30 group/pin" data-city="yogyakarta" style="left: 38.5%; top: 69.5%;">
+<span class="hotspot-ping absolute -inset-2.5 sm:-inset-3.5 rounded-full bg-emerald-400/40 animate-ping-slow pointer-events-none group-hover/pin:scale-175 group-hover/pin:bg-emerald-400/80 transition-all duration-300"></span>
+<span class="hotspot-glow absolute -inset-1.5 sm:-inset-2 rounded-full bg-slate-1000/40 blur-xs group-hover/pin:bg-emerald-400/80 group-hover/pin:blur-sm transition-all duration-300"></span>
+<div class="hotspot-core relative w-3.5 h-3.5 sm:w-4.5 sm:h-4.5 rounded-full bg-emerald-600 border-2 border-white shadow-lg flex items-center justify-center transition-all duration-300 group-hover/pin:scale-150 group-hover/pin:bg-emerald-400 group-hover/pin:ring-4 group-hover/pin:ring-emerald-300/60 group-hover/pin:shadow-[0_0_25px_rgba(16,185,129,1)]">
+<span class="w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full bg-white animate-pulse"></span>
+</div>
+<div class="hotspot-tooltip absolute bottom-full left-1/2 -translate-x-1/2 mb-3.5 w-52 sm:w-60 bg-white/95 backdrop-blur-md text-slate-900 text-left p-3.5 rounded-2xl shadow-2xl border border-slate-200 opacity-0 translate-y-2 pointer-events-none group-hover/pin:pointer-events-auto group-hover/pin:opacity-100 group-hover/pin:translate-y-0 transition-all duration-300 z-40">
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="font-bold text-[15px] text-emerald-300 flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping-slow"></span>
+                                            Klinik Cita Sehat
+                                        </span>
+</div>
+<div class="font-extrabold text-[15px] sm:text-[17px] text-slate-800">Klinik Yogyakarta</div>
+<div class="text-[11px] text-slate-500 mt-0.5 leading-snug">DI Yogyakarta •
+                                        Layanan Terpadu Poli Umum, Gigi &amp; KIA</div>
+<div class="absolute bottom-full left-1/2 -translate-x-1/2 -mb-1 border-4 border-transparent border-b-slate-900/95">
+</div>
+</div>
+</div>
+<!-- HOTSPOT PIN 5: SEMARANG (Jawa Tengah) -->
+<div class="clinic-hotspot absolute -translate-x-1/2 -translate-y-1/2 cursor-pointer z-30 group/pin" data-city="semarang" style="left: 38.5%; top: 67%;">
+<span class="hotspot-ping absolute -inset-2.5 sm:-inset-3.5 rounded-full bg-emerald-400/40 animate-ping-slow pointer-events-none group-hover/pin:scale-175 group-hover/pin:bg-emerald-400/80 transition-all duration-300"></span>
+<span class="hotspot-glow absolute -inset-1.5 sm:-inset-2 rounded-full bg-slate-1000/40 blur-xs group-hover/pin:bg-emerald-400/80 group-hover/pin:blur-sm transition-all duration-300"></span>
+<div class="hotspot-core relative w-3.5 h-3.5 sm:w-4.5 sm:h-4.5 rounded-full bg-emerald-600 border-2 border-white shadow-lg flex items-center justify-center transition-all duration-300 group-hover/pin:scale-150 group-hover/pin:bg-emerald-400 group-hover/pin:ring-4 group-hover/pin:ring-emerald-300/60 group-hover/pin:shadow-[0_0_25px_rgba(16,185,129,1)]">
+<span class="w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full bg-white animate-pulse"></span>
+</div>
+<div class="hotspot-tooltip absolute bottom-full left-1/2 -translate-x-1/2 mb-3.5 w-52 sm:w-60 bg-white/95 backdrop-blur-md text-slate-900 text-left p-3.5 rounded-2xl shadow-2xl border border-slate-200 opacity-0 translate-y-2 pointer-events-none group-hover/pin:pointer-events-auto group-hover/pin:opacity-100 group-hover/pin:translate-y-0 transition-all duration-300 z-40">
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="font-bold text-[15px] text-emerald-300 flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping-slow"></span>
+                                            Klinik Cita Sehat
+                                        </span>
+</div>
+<div class="font-extrabold text-[15px] sm:text-[17px] text-slate-800">Klinik Semarang</div>
+<div class="text-[11px] text-slate-500 mt-0.5 leading-snug">Jawa Tengah •
+                                        Layanan Terpadu Poli Umum, Gigi &amp; KIA</div>
+<div class="absolute bottom-full left-1/2 -translate-x-1/2 -mb-1 border-4 border-transparent border-b-slate-900/95">
+</div>
+</div>
+</div>
+<!-- HOTSPOT PIN 6: SURABAYA (Jawa Timur) -->
+<div class="clinic-hotspot absolute -translate-x-1/2 -translate-y-1/2 cursor-pointer z-30 group/pin" data-city="surabaya" style="left: 43.5%; top: 68%;">
+<span class="hotspot-ping absolute -inset-2.5 sm:-inset-3.5 rounded-full bg-emerald-400/40 animate-ping-slow pointer-events-none group-hover/pin:scale-175 group-hover/pin:bg-emerald-400/80 transition-all duration-300"></span>
+<span class="hotspot-glow absolute -inset-1.5 sm:-inset-2 rounded-full bg-slate-1000/40 blur-xs group-hover/pin:bg-emerald-400/80 group-hover/pin:blur-sm transition-all duration-300"></span>
+<div class="hotspot-core relative w-3.5 h-3.5 sm:w-4.5 sm:h-4.5 rounded-full bg-emerald-600 border-2 border-white shadow-lg flex items-center justify-center transition-all duration-300 group-hover/pin:scale-150 group-hover/pin:bg-emerald-400 group-hover/pin:ring-4 group-hover/pin:ring-emerald-300/60 group-hover/pin:shadow-[0_0_25px_rgba(16,185,129,1)]">
+<span class="w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full bg-white animate-pulse"></span>
+</div>
+<div class="hotspot-tooltip absolute bottom-full left-1/2 -translate-x-1/2 mb-3.5 w-52 sm:w-60 bg-white/95 backdrop-blur-md text-slate-900 text-left p-3.5 rounded-2xl shadow-2xl border border-slate-200 opacity-0 translate-y-2 pointer-events-none group-hover/pin:pointer-events-auto group-hover/pin:opacity-100 group-hover/pin:translate-y-0 transition-all duration-300 z-40">
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="font-bold text-[15px] text-emerald-300 flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping-slow"></span>
+                                            Klinik Cita Sehat
+                                        </span>
+</div>
+<div class="font-extrabold text-[15px] sm:text-[17px] text-slate-800">Klinik Surabaya</div>
+<div class="text-[11px] text-slate-500 mt-0.5 leading-snug">Jawa Timur •
+                                        Layanan Terpadu Poli Umum, Gigi &amp; KIA</div>
+<div class="absolute top-full left-1/2 -translate-x-1/2 -mt-1 border-4 border-transparent border-t-white/95">
+</div>
+</div>
+</div>
+</div>
+<!-- 6 Cities Location Tags / Badges -->
+<div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 pt-5 border-t border-slate-100 mt-4">
+<button class="city-badge group/badge hover:border-emerald-400 text-slate-800 hover:text-emerald-800 font-bold text-[15px] sm:text-[15px] transition-all duration-300 flex items-center gap-2 cursor-pointer active:scale-95" data-city="medan">
+<span>Medan</span>
+</button>
+<button class="city-badge group/badge hover:border-emerald-400 text-slate-800 hover:text-emerald-800 font-bold text-[15px] sm:text-[15px] transition-all duration-300 flex items-center gap-2 cursor-pointer active:scale-95" data-city="pekanbaru">
+<span>Pekanbaru</span>
+</button>
+<button class="city-badge group/badge hover:border-emerald-400 text-slate-800 hover:text-emerald-800 font-bold text-[15px] sm:text-[15px] transition-all duration-300 flex items-center gap-2 cursor-pointer active:scale-95" data-city="jakarta">
+<span>Jakarta</span>
+</button>
+<button class="city-badge group/badge hover:border-emerald-400 text-slate-800 hover:text-emerald-800 font-bold text-[15px] sm:text-[15px] transition-all duration-300 flex items-center gap-2 cursor-pointer active:scale-95" data-city="semarang">
+<span>Semarang</span>
+</button>
+<button class="city-badge group/badge hover:border-emerald-400 text-slate-800 hover:text-emerald-800 font-bold text-[15px] sm:text-[15px] transition-all duration-300 flex items-center gap-2 cursor-pointer active:scale-95" data-city="yogyakarta">
+<span>Yogyakarta</span>
+</button>
+<button class="city-badge group/badge hover:border-emerald-400 text-slate-800 hover:text-emerald-800 font-bold text-[15px] sm:text-[15px] transition-all duration-300 flex items-center gap-2 cursor-pointer active:scale-95" data-city="surabaya">
+<span>Surabaya</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-slate-50 relative py-24 lg:py-32 overflow-hidden border-t border-slate-200/60" id="suasana-klinik">
+<div class="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8">
+<div class="text-center max-w-3xl mx-auto mb-16">
+<h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight mb-6">Suasana Klinik</h2>
+<p class="text-lg text-slate-600">Lihat langsung pelayanan kesehatan di dalam jaringan klinik kami.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="flex flex-col gap-6">
+<h4 class="font-bold text-slate-800 text-lg text-center">Jakarta</h4>
+<div class="rounded-2xl overflow-hidden shadow-lg border border-slate-200">
+<iframe allowtransparency="true" frameborder="0" height="480" loading="lazy" scrolling="no" src="https://www.instagram.com/reel/Ddk0-E8TVnj/embed" width="100%"></iframe>
+</div>
+<div class="rounded-2xl overflow-hidden shadow-lg border border-slate-200">
+<iframe allowtransparency="true" frameborder="0" height="480" loading="lazy" scrolling="no" src="https://www.instagram.com/reel/DdiQIuhqf73/embed" width="100%"></iframe>
+</div>
+</div>
+<div class="flex flex-col gap-6">
+<h4 class="font-bold text-slate-800 text-lg text-center">Yogyakarta</h4>
+<div class="rounded-2xl overflow-hidden shadow-lg border border-slate-200">
+<iframe allowtransparency="true" frameborder="0" height="480" loading="lazy" scrolling="no" src="https://www.instagram.com/reel/DdTHrqOy_ar/embed" width="100%"></iframe>
+</div>
+<div class="rounded-2xl overflow-hidden shadow-lg border border-slate-200">
+<iframe allowtransparency="true" frameborder="0" height="480" loading="lazy" scrolling="no" src="https://www.instagram.com/reel/DdDkbsAJYKx/embed" width="100%"></iframe>
+</div>
+</div>
+<div class="flex flex-col gap-6">
+<h4 class="font-bold text-slate-800 text-lg text-center">Semarang</h4>
+<div class="rounded-2xl overflow-hidden shadow-lg border border-slate-200">
+<iframe allowtransparency="true" frameborder="0" height="480" loading="lazy" scrolling="no" src="https://www.instagram.com/reel/Ddp1DuNzNqO/embed" width="100%"></iframe>
+</div>
+<div class="rounded-2xl overflow-hidden shadow-lg border border-slate-200">
+<iframe allowtransparency="true" frameborder="0" height="480" loading="lazy" scrolling="no" src="https://www.instagram.com/reel/Ddpv6dbt3_h/embed" width="100%"></iframe>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==========================================================================
+             SECTION 4.7: DAMPAK (KOMITMEN SOSIAL & ANGKA)
+             ========================================================================== -->
+<!-- ==========================================================================
+             SECTION 4.8: CARA KERJA (DARI KLINIK KE KOMUNITAS)
+             ========================================================================== -->
+<section class="min- bg-white text-slate-800 relative flex flex-col justify-center pt-20 pb-6 lg:pt-24 lg:pb-8 border-t border-slate-200/60 overflow-hidden" id="cara-kerja">
+<div class="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 z-10 flex-1 flex flex-col justify-center my-auto text-center">
+<div class="text-center mb-8">
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-100 border border-teal-200/80 w-fit mb-2">
+<span class="text-teal-700 text-[15px] font-extrabold uppercase tracking-wider">Cara kerja</span>
+</div>
+<h2 class="text-[32px] sm:text-[32px] lg:text-[54px] font-extrabold text-slate-900 tracking-tight leading-tight mb-2">Darimu Untuk Mereka</h2>
+<p class="text-[15px] sm:text-[17px] text-slate-600 max-w-2xl mx-auto">Dengan menggunakan layanan kesehatan di Jaringan Klinik Cita Sehat, kamu sudah ikut serta dalam menyehatkan orang lain. Telah ada 174.000 orang yang mendapatkan manfaat dalam bentuk 250.000 layanan kesehatan di pelosok negeri.</p>
+</div>
+<!-- 3-Column Grid Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4 max-w-6xl mx-auto w-full">
+<!-- Card 1 -->
+<div class="flex flex-col gap-4"><span class="text-[15px] font-bold uppercase tracking-wider text-emerald-700 text-center">Langkah 1</span><div class="relative rounded-3xl overflow-hidden shadow-sm h-[380px] sm:h-[400px] lg:h-[430px] group flex flex-col justify-start p-6 border border-slate-200/20 transition-all duration-300">
+<!-- BG Image -->
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700" style="background-image: url('images/cara_kerja_1.jpg');"></div>
+<!-- Gradient Overlay -->
+<div class="absolute to-transparent z-10 inset-x-0 bg-gradient-to-b top-0 h-2/5 from-[#72BE44]/90">
+</div>
+<!-- Content -->
+<div class="relative z-20 space-y-2 text-center">
+<h3 class="text-[17px] font-bold text-white leading-tight sm:text-[20px]">Pembayaran Layanan Kesehatan Di Jaringan Klinik Cita Sehat</h3>
+</div>
+</div></div>
+<!-- Card 2 -->
+<div class="flex flex-col gap-4"><span class="text-[15px] font-bold uppercase tracking-wider text-emerald-700 text-center">Langkah 2</span><div class="relative rounded-3xl overflow-hidden shadow-sm h-[380px] sm:h-[400px] lg:h-[430px] group flex flex-col justify-start p-6 border border-slate-200/20 transition-all duration-300">
+<!-- BG Image -->
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700" style="background-image: url('images/cara_kerja_2.jpg');"></div>
+<!-- Gradient Overlay -->
+<div class="absolute to-transparent z-10 inset-x-0 bg-gradient-to-b top-0 h-2/5 from-[#72BE44]/90">
+</div>
+<!-- Content -->
+<div class="relative z-20 space-y-2 text-center">
+<h3 class="text-[17px] font-bold text-white leading-tight sm:text-[20px]">Pengelolaan Keuangan dan Penentuan Lokasi Intervensi</h3>
+</div>
+</div></div>
+<!-- Card 3 -->
+<div class="flex flex-col gap-4"><span class="text-[15px] font-bold uppercase tracking-wider text-emerald-700 text-center">Langkah 3</span><div class="relative rounded-3xl overflow-hidden shadow-sm h-[380px] sm:h-[400px] lg:h-[430px] group flex flex-col justify-start p-6 border border-slate-200/20 transition-all duration-300">
+<!-- BG Image -->
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700" style="background-image: url('images/cara_kerja_3.jpg');"></div>
+<!-- Gradient Overlay -->
+<div class="absolute to-transparent z-10 inset-x-0 bg-gradient-to-b top-0 h-2/5 from-[#72BE44]/90">
+</div>
+<!-- Content -->
+<div class="relative z-20 space-y-2 text-center">
+<h3 class="text-[17px] font-bold text-white leading-tight sm:text-[20px]">Penyaluran Pelayanan Kesehatan Ke Pelosok Negeri</h3>
+</div>
+</div></div>
+</div>
+</div>
+</section><section class="bg-slate-100/30 relative py-24 lg:py-32 overflow-hidden border-t border-slate-200/60" id="bukti-sehatbersama">
+<div class="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8">
+<div class="text-center max-w-3xl mx-auto mb-16">
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-100 border border-teal-200/80 w-fit mb-4">
+<span class="text-teal-800 text-xs font-extrabold uppercase tracking-wider">Sejarah Panjang Cita Sehat</span>
+</div>
+<h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight mb-6">Gerakan #SehatBersama</h2>
+<p class="text-lg text-slate-600">Langkah nyata kami membawa akses kesehatan untuk mereka yang paling membutuhkan.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="flex flex-col items-center gap-3">
+<h4 class="font-bold text-slate-800 text-lg">Padang - Gerakan Tanggap Bencana</h4>
+<div class="w-full max-w-sm rounded-2xl overflow-hidden shadow-lg border border-slate-200 mx-auto aspect-[9/16]">
+<iframe allowtransparency="true" class="w-full" frameborder="0" height="100%" loading="lazy" scrolling="no" src="https://www.instagram.com/reel/Db7If_SyfUi/embed" width="100%"></iframe>
+</div>
+</div>
+<div class="flex flex-col items-center gap-3">
+<h4 class="font-bold text-slate-800 text-lg">12 Desa Binaan - Skrining PTM</h4>
+<div class="w-full max-w-sm rounded-2xl overflow-hidden shadow-lg border border-slate-200 mx-auto aspect-[9/16]">
+<iframe allowtransparency="true" class="w-full" frameborder="0" height="100%" loading="lazy" scrolling="no" src="https://www.instagram.com/reel/DbZuosVyyXW/embed" width="100%"></iframe>
+</div>
+</div>
+<div class="flex flex-col items-center gap-3">
+<h4 class="font-bold text-slate-800 text-lg">Flores - Bantuan Peduli Gempa</h4>
+<div class="w-full max-w-sm rounded-2xl overflow-hidden shadow-lg border border-slate-200 mx-auto aspect-[9/16]">
+<iframe allowtransparency="true" class="w-full" frameborder="0" height="100%" loading="lazy" scrolling="no" src="https://www.instagram.com/reel/DcTP7v8SjIh/embed" width="100%"></iframe>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==========================================================================
+             SECTION 5: TESTIMONI PASIEN (MEDVI STYLE DUAL RUNNING MARQUEE WITH 6 PHOTO CARDS)
+             ========================================================================== -->
+<section class="min- bg-white text-slate-800 relative flex flex-col justify-between pt-20 pb-6 lg:pt-24 lg:pb-8 overflow-hidden border-t border-slate-200/60" id="testimoni">
+<div class="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 text-center pt-1 z-10">
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-100 border border-teal-200/80 w-fit mb-2">
+<span class="text-teal-700 text-[15px] font-extrabold uppercase tracking-wider">Ulasan &amp; Pengalaman
+                        Pasien</span>
+</div>
+<h2 class="text-[32px] sm:text-[32px] lg:text-[54px] font-extrabold text-slate-900 tracking-tight leading-tight mb-2">Apa Kata Mereka?</h2>
+<p class="text-[15px] sm:text-[17px] text-slate-600 max-w-2xl mx-auto">
+                    Mendengar pasien merasa tenang dan lega setelah berobat adalah penyemangat terbesar bagi seluruh tenaga medis kami.
+                </p>
+</div>
+<!-- Running Text Tracks Container -->
+<div class="w-full flex-1 flex flex-col justify-center space-y-4 sm:space-y-6 relative py-2 overflow-hidden">
+<!-- Fade edge gradients (White fade) -->
+<div class="pointer-events-none absolute inset-y-0 left-0 w-12 sm:w-28 bg-gradient-to-r from-white to-transparent z-20">
+</div>
+<div class="pointer-events-none absolute inset-y-0 right-0 w-12 sm:w-28 bg-gradient-to-l from-white to-transparent z-20">
+</div>
+<!-- TRACK 1: BERJALAN KE KANAN (4 Testimoni + 3 Foto = 7 Items) -->
+<div class="overflow-hidden w-full">
+<div class="marquee-track-right">
+<!-- Repeated Block 1 -->
+<div class="flex items-center">
+<!-- Card 1: Nurul Qomariyah -->
+<div class="w-[290px] sm:w-[340px] h-[225px] sm:h-[250px] flex-shrink-0 bg-[#f2f7f4] rounded-3xl p-5 sm:p-6 shadow-sm mx-3 flex flex-col justify-start text-left border border-teal-900/5">
+<div class="flex items-start justify-between mb-2.5">
+<div class="flex flex-col">
+<span class="font-bold text-slate-900 text-[15px] sm:text-[17px] tracking-tight">Nurul
+                                            Qomariyah</span>
+<span class="text-[10px] sm:text-[15px] text-slate-500 font-medium mt-0.5">Klinik
+                                            Semarang</span><span class="text-[10px] sm:text-[13px] text-slate-400 font-medium mt-0.5">2 Minggu Lalu</span>
+</div>
+<span class="text-teal-700 text-[17px] sm:text-[22px] tracking-widest font-extrabold flex-shrink-0">★★★★★</span>
+</div>
+<p class="text-slate-700 text-[15px] sm:text-[15px] leading-relaxed font-normal">
+                                    “Pelayanan bagus, ramah,tempat bersih..keluarga cocok berobat diklinik cita sehat”
+                                </p>
+</div>
+<!-- FOTO CARD 1: Hijab Pink Tertawa -->
+<div class="w-[270px] sm:w-[320px] h-[225px] sm:h-[250px] flex-shrink-0 rounded-3xl overflow-hidden shadow-sm mx-3 border border-slate-200/60 group">
+<img alt="Pasien Cita Sehat Berhijab Tertawa" class="w-full h-full object-cover transition-transform duration-500" loading="lazy" src="images/13_avatar_testi_1.jpg"/>
+</div>
+<!-- Card 2: Nadiya Nisa -->
+<div class="w-[290px] sm:w-[340px] h-[225px] sm:h-[250px] flex-shrink-0 bg-[#f2f7f4] rounded-3xl p-5 sm:p-6 shadow-sm mx-3 flex flex-col justify-start text-left border border-teal-900/5">
+<div class="flex items-start justify-between mb-2.5">
+<div class="flex flex-col">
+<span class="font-bold text-slate-900 text-[15px] sm:text-[17px] tracking-tight">Nadiya
+                                            Nisa</span>
+<span class="text-[10px] sm:text-[15px] text-slate-500 font-medium mt-0.5">Klinik
+                                            Semarang</span><span class="text-[10px] sm:text-[13px] text-slate-400 font-medium mt-0.5">3 Minggu Lalu</span>
+</div>
+<span class="text-teal-700 text-[17px] sm:text-[22px] tracking-widest font-extrabold flex-shrink-0">★★★★★</span>
+</div>
+<p class="text-slate-700 text-[15px] sm:text-[15px] leading-relaxed font-normal">
+                                    “Rumah saya jauh, tapi saya memilih faskes disni, karena tidak antri, layanan
+                                    lengkap, mudah, dan dokter nya cocok”
+                                </p>
+</div>
+<!-- Card 3: Sirin Kaila -->
+<div class="w-[290px] sm:w-[340px] h-[225px] sm:h-[250px] flex-shrink-0 bg-[#f2f7f4] rounded-3xl p-5 sm:p-6 shadow-sm mx-3 flex flex-col justify-start text-left border border-teal-900/5">
+<div class="flex items-start justify-between mb-2.5">
+<div class="flex flex-col">
+<span class="font-bold text-slate-900 text-[15px] sm:text-[17px] tracking-tight">Sirin
+                                            Kaila</span>
+<span class="text-[10px] sm:text-[15px] text-slate-500 font-medium mt-0.5">Klinik
+                                            Surabaya</span><span class="text-[10px] sm:text-[13px] text-slate-400 font-medium mt-0.5">3 Bulan Lalu</span>
+</div>
+<span class="text-teal-700 text-[17px] sm:text-[22px] tracking-widest font-extrabold flex-shrink-0">★★★★★</span>
+</div>
+<p class="text-slate-700 text-[15px] sm:text-[15px] leading-relaxed font-normal">
+                                    “Tempatnya nyaman, orangnya ramah, sopan santun dan memberi senyuman dengan tulus
+                                    dalam melayani saya”
+                                </p>
+</div>
+<!-- FOTO CARD 2: Wanita Muda Tertawa Lepas -->
+<div class="w-[270px] sm:w-[320px] h-[225px] sm:h-[250px] flex-shrink-0 rounded-3xl overflow-hidden shadow-sm mx-3 border border-slate-200/60 group">
+<img alt="Pasien Cita Sehat Tertawa Bahagia" class="w-full h-full object-cover transition-transform duration-500" loading="lazy" src="images/14_avatar_testi_2.jpg"/>
+</div>
+<!-- Card 4: Kintan Elsa -->
+<div class="w-[290px] sm:w-[340px] h-[225px] sm:h-[250px] flex-shrink-0 bg-[#f2f7f4] rounded-3xl p-5 sm:p-6 shadow-sm mx-3 flex flex-col justify-start text-left border border-teal-900/5">
+<div class="flex items-start justify-between mb-2.5">
+<div class="flex flex-col">
+<span class="font-bold text-slate-900 text-[15px] sm:text-[17px] tracking-tight">Kintan
+                                            Elsa</span>
+<span class="text-[10px] sm:text-[15px] text-slate-500 font-medium mt-0.5">Klinik
+                                            Yogyakarta</span><span class="text-[10px] sm:text-[13px] text-slate-400 font-medium mt-0.5">2 Minggu Lalu</span>
+</div>
+<span class="text-teal-700 text-[17px] sm:text-[22px] tracking-widest font-extrabold flex-shrink-0">★★★★★</span>
+</div>
+<p class="text-slate-700 text-[15px] sm:text-[15px] leading-relaxed font-normal">
+                                    “Pelayanan kesehatan di klinik cita sehat sangat bagus, mulai dari pendaftaran ,
+                                    pemeriksaan dokter bidan dan staf lain sangat ramah komunikatif dan cekatan dalam
+                                    melayani pasien”
+                                </p>
+</div>
+<!-- FOTO CARD 3: Ibu Berhijab Cream Tertawa Hangat -->
+<div class="w-[270px] sm:w-[320px] h-[225px] sm:h-[250px] flex-shrink-0 rounded-3xl overflow-hidden shadow-sm mx-3 border border-slate-200/60 group">
+<img alt="Pasien Ibu Berhijab Cita Sehat Tertawa" class="w-full h-full object-cover transition-transform duration-500" loading="lazy" src="images/15_avatar_testi_3.jpg"/>
+</div>
+</div>
+<!-- Repeated Block 2 (Identical for seamless infinite scroll) -->
+<div aria-hidden="true" class="flex items-center">
+<div class="w-[290px] sm:w-[340px] h-[225px] sm:h-[250px] flex-shrink-0 bg-[#f2f7f4] rounded-3xl p-5 sm:p-6 shadow-sm mx-3 flex flex-col justify-start text-left border border-teal-900/5">
+<div class="flex items-start justify-between mb-2.5">
+<div class="flex flex-col">
+<span class="font-bold text-slate-900 text-[15px] sm:text-[17px] tracking-tight">Nurul
+                                            Qomariyah</span>
+<span class="text-[10px] sm:text-[15px] text-slate-500 font-medium mt-0.5">Klinik
+                                            Semarang</span><span class="text-[10px] sm:text-[13px] text-slate-400 font-medium mt-0.5">2 Minggu Lalu</span>
+</div>
+<span class="text-teal-700 text-[17px] sm:text-[22px] tracking-widest font-extrabold flex-shrink-0">★★★★★</span>
+</div>
+<p class="text-slate-700 text-[15px] sm:text-[15px] leading-relaxed font-normal">
+                                    “Pelayanan bagus, ramah,tempat bersih..keluarga cocok berobat diklinik cita sehat”
+                                </p>
+</div>
+<div class="w-[270px] sm:w-[320px] h-[225px] sm:h-[250px] flex-shrink-0 rounded-3xl overflow-hidden shadow-sm mx-3 border border-slate-200/60 group">
+<img alt="Pasien Cita Sehat Berhijab Tertawa" class="w-full h-full object-cover transition-transform duration-500" loading="lazy" src="images/13_avatar_testi_1.jpg"/>
+</div>
+<div class="w-[290px] sm:w-[340px] h-[225px] sm:h-[250px] flex-shrink-0 bg-[#f2f7f4] rounded-3xl p-5 sm:p-6 shadow-sm mx-3 flex flex-col justify-start text-left border border-teal-900/5">
+<div class="flex items-start justify-between mb-2.5">
+<div class="flex flex-col">
+<span class="font-bold text-slate-900 text-[15px] sm:text-[17px] tracking-tight">Nadiya
+                                            Nisa</span>
+<span class="text-[10px] sm:text-[15px] text-slate-500 font-medium mt-0.5">Klinik
+                                            Semarang</span><span class="text-[10px] sm:text-[13px] text-slate-400 font-medium mt-0.5">3 Minggu Lalu</span>
+</div>
+<span class="text-teal-700 text-[17px] sm:text-[22px] tracking-widest font-extrabold flex-shrink-0">★★★★★</span>
+</div>
+<p class="text-slate-700 text-[15px] sm:text-[15px] leading-relaxed font-normal">
+                                    “Rumah saya jauh, tapi saya memilih faskes disni, karena tidak antri, layanan
+                                    lengkap, mudah, dan dokter nya cocok”
+                                </p>
+</div>
+<div class="w-[290px] sm:w-[340px] h-[225px] sm:h-[250px] flex-shrink-0 bg-[#f2f7f4] rounded-3xl p-5 sm:p-6 shadow-sm mx-3 flex flex-col justify-start text-left border border-teal-900/5">
+<div class="flex items-start justify-between mb-2.5">
+<div class="flex flex-col">
+<span class="font-bold text-slate-900 text-[15px] sm:text-[17px] tracking-tight">Sirin
+                                            Kaila</span>
+<span class="text-[10px] sm:text-[15px] text-slate-500 font-medium mt-0.5">Klinik
+                                            Surabaya</span><span class="text-[10px] sm:text-[13px] text-slate-400 font-medium mt-0.5">3 Bulan Lalu</span>
+</div>
+<span class="text-teal-700 text-[17px] sm:text-[22px] tracking-widest font-extrabold flex-shrink-0">★★★★★</span>
+</div>
+<p class="text-slate-700 text-[15px] sm:text-[15px] leading-relaxed font-normal">
+                                    “Tempatnya nyaman, orangnya ramah, sopan santun dan memberi senyuman dengan tulus
+                                    dalam melayani saya”
+                                </p>
+</div>
+<div class="w-[270px] sm:w-[320px] h-[225px] sm:h-[250px] flex-shrink-0 rounded-3xl overflow-hidden shadow-sm mx-3 border border-slate-200/60 group">
+<img alt="Pasien Cita Sehat Tertawa Bahagia" class="w-full h-full object-cover transition-transform duration-500" loading="lazy" src="images/14_avatar_testi_2.jpg"/>
+</div>
+<div class="w-[290px] sm:w-[340px] h-[225px] sm:h-[250px] flex-shrink-0 bg-[#f2f7f4] rounded-3xl p-5 sm:p-6 shadow-sm mx-3 flex flex-col justify-start text-left border border-teal-900/5">
+<div class="flex items-start justify-between mb-2.5">
+<div class="flex flex-col">
+<span class="font-bold text-slate-900 text-[15px] sm:text-[17px] tracking-tight">Kintan
+                                            Elsa</span>
+<span class="text-[10px] sm:text-[15px] text-slate-500 font-medium mt-0.5">Klinik
+                                            Yogyakarta</span><span class="text-[10px] sm:text-[13px] text-slate-400 font-medium mt-0.5">2 Minggu Lalu</span>
+</div>
+<span class="text-teal-700 text-[17px] sm:text-[22px] tracking-widest font-extrabold flex-shrink-0">★★★★★</span>
+</div>
+<p class="text-slate-700 text-[15px] sm:text-[15px] leading-relaxed font-normal">
+                                    “Pelayanan kesehatan di klinik cita sehat sangat bagus, mulai dari pendaftaran ,
+                                    pemeriksaan dokter bidan dan staf lain sangat ramah komunikatif dan cekatan dalam
+                                    melayani pasien”
+                                </p>
+</div>
+<div class="w-[270px] sm:w-[320px] h-[225px] sm:h-[250px] flex-shrink-0 rounded-3xl overflow-hidden shadow-sm mx-3 border border-slate-200/60 group">
+<img alt="Pasien Ibu Berhijab Cita Sehat Tertawa" class="w-full h-full object-cover transition-transform duration-500" loading="lazy" src="images/15_avatar_testi_3.jpg"/>
+</div>
+</div>
+<!-- Repeated Block 3 -->
+<div aria-hidden="true" class="flex items-center">
+<div class="w-[290px] sm:w-[340px] h-[225px] sm:h-[250px] flex-shrink-0 bg-[#f2f7f4] rounded-3xl p-5 sm:p-6 shadow-sm mx-3 flex flex-col justify-start text-left border border-teal-900/5">
+<div class="flex items-start justify-between mb-2.5">
+<div class="flex flex-col">
+<span class="font-bold text-slate-900 text-[15px] sm:text-[17px] tracking-tight">Nurul
+                                            Qomariyah</span>
+<span class="text-[10px] sm:text-[15px] text-slate-500 font-medium mt-0.5">Klinik
+                                            Semarang</span><span class="text-[10px] sm:text-[13px] text-slate-400 font-medium mt-0.5">2 Minggu Lalu</span>
+</div>
+<span class="text-teal-700 text-[17px] sm:text-[22px] tracking-widest font-extrabold flex-shrink-0">★★★★★</span>
+</div>
+<p class="text-slate-700 text-[15px] sm:text-[15px] leading-relaxed font-normal">
+                                    “Pelayanan bagus, ramah,tempat bersih..keluarga cocok berobat diklinik cita sehat”
+                                </p>
+</div>
+<div class="w-[270px] sm:w-[320px] h-[225px] sm:h-[250px] flex-shrink-0 rounded-3xl overflow-hidden shadow-sm mx-3 border border-slate-200/60 group">
+<img alt="Pasien Cita Sehat Berhijab Tertawa" class="w-full h-full object-cover transition-transform duration-500" loading="lazy" src="images/13_avatar_testi_1.jpg"/>
+</div>
+<div class="w-[290px] sm:w-[340px] h-[225px] sm:h-[250px] flex-shrink-0 bg-[#f2f7f4] rounded-3xl p-5 sm:p-6 shadow-sm mx-3 flex flex-col justify-start text-left border border-teal-900/5">
+<div class="flex items-start justify-between mb-2.5">
+<div class="flex flex-col">
+<span class="font-bold text-slate-900 text-[15px] sm:text-[17px] tracking-tight">Nadiya
+                                            Nisa</span>
+<span class="text-[10px] sm:text-[15px] text-slate-500 font-medium mt-0.5">Klinik
+                                            Semarang</span><span class="text-[10px] sm:text-[13px] text-slate-400 font-medium mt-0.5">3 Minggu Lalu</span>
+</div>
+<span class="text-teal-700 text-[17px] sm:text-[22px] tracking-widest font-extrabold flex-shrink-0">★★★★★</span>
+</div>
+<p class="text-slate-700 text-[15px] sm:text-[15px] leading-relaxed font-normal">
+                                    “Rumah saya jauh, tapi saya memilih faskes disni, karena tidak antri, layanan
+                                    lengkap, mudah, dan dokter nya cocok”
+                                </p>
+</div>
+<div class="w-[290px] sm:w-[340px] h-[225px] sm:h-[250px] flex-shrink-0 bg-[#f2f7f4] rounded-3xl p-5 sm:p-6 shadow-sm mx-3 flex flex-col justify-start text-left border border-teal-900/5">
+<div class="flex items-start justify-between mb-2.5">
+<div class="flex flex-col">
+<span class="font-bold text-slate-900 text-[15px] sm:text-[17px] tracking-tight">Sirin
+                                            Kaila</span>
+<span class="text-[10px] sm:text-[15px] text-slate-500 font-medium mt-0.5">Klinik
+                                            Surabaya</span><span class="text-[10px] sm:text-[13px] text-slate-400 font-medium mt-0.5">3 Bulan Lalu</span>
+</div>
+<span class="text-teal-700 text-[17px] sm:text-[22px] tracking-widest font-extrabold flex-shrink-0">★★★★★</span>
+</div>
+<p class="text-slate-700 text-[15px] sm:text-[15px] leading-relaxed font-normal">
+                                    “Tempatnya nyaman, orangnya ramah, sopan santun dan memberi senyuman dengan tulus
+                                    dalam melayani saya”
+                                </p>
+</div>
+<div class="w-[270px] sm:w-[320px] h-[225px] sm:h-[250px] flex-shrink-0 rounded-3xl overflow-hidden shadow-sm mx-3 border border-slate-200/60 group">
+<img alt="Pasien Cita Sehat Tertawa Bahagia" class="w-full h-full object-cover transition-transform duration-500" loading="lazy" src="images/14_avatar_testi_2.jpg"/>
+</div>
+<div class="w-[290px] sm:w-[340px] h-[225px] sm:h-[250px] flex-shrink-0 bg-[#f2f7f4] rounded-3xl p-5 sm:p-6 shadow-sm mx-3 flex flex-col justify-start text-left border border-teal-900/5">
+<div class="flex items-start justify-between mb-2.5">
+<div class="flex flex-col">
+<span class="font-bold text-slate-900 text-[15px] sm:text-[17px] tracking-tight">Kintan
+                                            Elsa</span>
+<span class="text-[10px] sm:text-[15px] text-slate-500 font-medium mt-0.5">Klinik
+                                            Yogyakarta</span><span class="text-[10px] sm:text-[13px] text-slate-400 font-medium mt-0.5">2 Minggu Lalu</span>
+</div>
+<span class="text-teal-700 text-[17px] sm:text-[22px] tracking-widest font-extrabold flex-shrink-0">★★★★★</span>
+</div>
+<p class="text-slate-700 text-[15px] sm:text-[15px] leading-relaxed font-normal">
+                                    “Pelayanan kesehatan di klinik cita sehat sangat bagus, mulai dari pendaftaran ,
+                                    pemeriksaan dokter bidan dan staf lain sangat ramah komunikatif dan cekatan dalam
+                                    melayani pasien”
+                                </p>
+</div>
+<div class="w-[270px] sm:w-[320px] h-[225px] sm:h-[250px] flex-shrink-0 rounded-3xl overflow-hidden shadow-sm mx-3 border border-slate-200/60 group">
+<img alt="Pasien Ibu Berhijab Cita Sehat Tertawa" class="w-full h-full object-cover transition-transform duration-500" loading="lazy" src="images/15_avatar_testi_3.jpg"/>
+</div>
+</div>
+</div>
+</div>
+<!-- TRACK 2: BERJALAN KE KIRI (4 Testimoni + 3 Foto = 7 Items) -->
+<div class="overflow-hidden w-full">
+<div class="marquee-track-left">
+<!-- Repeated Block 1 -->
+<div class="flex items-center">
+<!-- Card 1: Dedy Herawan -->
+<div class="w-[290px] sm:w-[340px] h-[225px] sm:h-[250px] flex-shrink-0 bg-[#f2f7f4] rounded-3xl p-5 sm:p-6 shadow-sm mx-3 flex flex-col justify-start text-left border border-teal-900/5">
+<div class="flex items-start justify-between mb-2.5">
+<div class="flex flex-col">
+<span class="font-bold text-slate-900 text-[15px] sm:text-[17px] tracking-tight">Dedy
+                                            Herawan</span>
+<span class="text-[10px] sm:text-[15px] text-slate-500 font-medium mt-0.5">Klinik
+                                            Jakarta</span><span class="text-[10px] sm:text-[13px] text-slate-400 font-medium mt-0.5">3 Minggu Lalu</span>
+</div>
+<span class="text-teal-700 text-[17px] sm:text-[22px] tracking-widest font-extrabold flex-shrink-0">★★★★★</span>
+</div>
+<p class="text-slate-700 text-[15px] sm:text-[15px] leading-relaxed font-normal">
+                                    “Alhamdulilah saya berobat di klinik pratama cita sehat saya sembuh penyakit saya
+                                    terimakasih”
+                                </p>
+</div>
+<!-- FOTO CARD 4: Pria Cita Sehat Tersenyum Ramah -->
+<div class="w-[270px] sm:w-[320px] h-[225px] sm:h-[250px] flex-shrink-0 rounded-3xl overflow-hidden shadow-sm mx-3 border border-slate-200/60 group">
+<img alt="Pasien Pria Cita Sehat Tersenyum Ramah" class="w-full h-full object-cover transition-transform duration-500" loading="lazy" src="images/16_avatar_testi_man.jpg"/>
+</div>
+<!-- Card 2: Handy Nakita -->
+<div class="w-[290px] sm:w-[340px] h-[225px] sm:h-[250px] flex-shrink-0 bg-[#f2f7f4] rounded-3xl p-5 sm:p-6 shadow-sm mx-3 flex flex-col justify-start text-left border border-teal-900/5">
+<div class="flex items-start justify-between mb-2.5">
+<div class="flex flex-col">
+<span class="font-bold text-slate-900 text-[15px] sm:text-[17px] tracking-tight">Handy
+                                            Nakita</span>
+<span class="text-[10px] sm:text-[15px] text-slate-500 font-medium mt-0.5">Klinik
+                                            Yogyakarta</span><span class="text-[10px] sm:text-[13px] text-slate-400 font-medium mt-0.5">1 Bulan yang Lalu</span>
+</div>
+<span class="text-teal-700 text-[17px] sm:text-[22px] tracking-widest font-extrabold flex-shrink-0">★★★★★</span>
+</div>
+<p class="text-slate-700 text-[15px] sm:text-[15px] leading-relaxed font-normal">
+                                    “Habis Scalling di sini. Dokternya ramah banget, wkt penanganan juga hati hati
+                                    banget, Worth it”
+                                </p>
+</div>
+<!-- FOTO CARD 5: Wanita Hijab Biru Muda Tertawa -->
+<div class="w-[270px] sm:w-[320px] h-[225px] sm:h-[250px] flex-shrink-0 rounded-3xl overflow-hidden shadow-sm mx-3 border border-slate-200/60 group">
+<img alt="Pasien Hijab Biru Muda Cita Sehat Tertawa" class="w-full h-full object-cover transition-transform duration-500" loading="lazy" src="images/17_avatar_testi_5.jpg"/>
+</div>
+<!-- Card 3: Afrian Hassan -->
+<div class="w-[290px] sm:w-[340px] h-[225px] sm:h-[250px] flex-shrink-0 bg-[#f2f7f4] rounded-3xl p-5 sm:p-6 shadow-sm mx-3 flex flex-col justify-start text-left border border-teal-900/5">
+<div class="flex items-start justify-between mb-2.5">
+<div class="flex flex-col">
+<span class="font-bold text-slate-900 text-[15px] sm:text-[17px] tracking-tight">Afrian
+                                            Hassan</span>
+<span class="text-[10px] sm:text-[15px] text-slate-500 font-medium mt-0.5">Klinik
+                                            Medan</span><span class="text-[10px] sm:text-[13px] text-slate-400 font-medium mt-0.5">6 Minggu Lalu</span>
+</div>
+<span class="text-teal-700 text-[17px] sm:text-[22px] tracking-widest font-extrabold flex-shrink-0">★★★★★</span>
+</div>
+<p class="text-slate-700 text-[15px] sm:text-[15px] leading-relaxed font-normal">
+                                    “Alhamdulillah pelayanan di sini bagus, Bidan sama bagian administrasi nya ramah
+                                    semua”
+                                </p>
+</div>
+<!-- Card 4: Velia Sasmita -->
+<div class="w-[290px] sm:w-[340px] h-[225px] sm:h-[250px] flex-shrink-0 bg-[#f2f7f4] rounded-3xl p-5 sm:p-6 shadow-sm mx-3 flex flex-col justify-start text-left border border-teal-900/5">
+<div class="flex items-start justify-between mb-2.5">
+<div class="flex flex-col">
+<span class="font-bold text-slate-900 text-[15px] sm:text-[17px] tracking-tight">Velia
+                                            Sasmita</span>
+<span class="text-[10px] sm:text-[15px] text-slate-500 font-medium mt-0.5">Klinik
+                                            Pekanbaru</span><span class="text-[10px] sm:text-[13px] text-slate-400 font-medium mt-0.5">2 Minggu Lalu</span>
+</div>
+<span class="text-teal-700 text-[17px] sm:text-[22px] tracking-widest font-extrabold flex-shrink-0">★★★★★</span>
+</div>
+<p class="text-slate-700 text-[15px] sm:text-[15px] leading-relaxed font-normal line-clamp-4">
+                                    “Pelayanannya sangat ramah dan profesional. Dokter menjelaskan kondisi gigi dengan
+                                    jelas sehingga saya merasa lebih tenang, perawat nya baik dan ramah. Sangat puas
+                                    dengan pelayanannya.”
+                                </p>
+</div>
+<!-- FOTO CARD 6: Ibu Berhijab Cokelat Tertawa Hangat -->
+<div class="w-[270px] sm:w-[320px] h-[225px] sm:h-[250px] flex-shrink-0 rounded-3xl overflow-hidden shadow-sm mx-3 border border-slate-200/60 group">
+<img alt="Pasien Ibu Berhijab Cokelat Cita Sehat Tertawa" class="w-full h-full object-cover transition-transform duration-500" loading="lazy" src="images/18_avatar_testi_6.jpg"/>
+</div>
+</div>
+<!-- Repeated Block 2 -->
+<div aria-hidden="true" class="flex items-center">
+<div class="w-[290px] sm:w-[340px] h-[225px] sm:h-[250px] flex-shrink-0 bg-[#f2f7f4] rounded-3xl p-5 sm:p-6 shadow-sm mx-3 flex flex-col justify-start text-left border border-teal-900/5">
+<div class="flex items-start justify-between mb-2.5">
+<div class="flex flex-col">
+<span class="font-bold text-slate-900 text-[15px] sm:text-[17px] tracking-tight">Dedy
+                                            Herawan</span>
+<span class="text-[10px] sm:text-[15px] text-slate-500 font-medium mt-0.5">Klinik
+                                            Jakarta</span><span class="text-[10px] sm:text-[13px] text-slate-400 font-medium mt-0.5">3 Minggu Lalu</span>
+</div>
+<span class="text-teal-700 text-[17px] sm:text-[22px] tracking-widest font-extrabold flex-shrink-0">★★★★★</span>
+</div>
+<p class="text-slate-700 text-[15px] sm:text-[15px] leading-relaxed font-normal">
+                                    “Alhamdulilah saya berobat di klinik pratama cita sehat saya sembuh penyakit saya
+                                    terimakasih”
+                                </p>
+</div>
+<div class="w-[270px] sm:w-[320px] h-[225px] sm:h-[250px] flex-shrink-0 rounded-3xl overflow-hidden shadow-sm mx-3 border border-slate-200/60 group">
+<img alt="Pasien Pria Cita Sehat Tersenyum Ramah" class="w-full h-full object-cover transition-transform duration-500" loading="lazy" src="images/16_avatar_testi_man.jpg"/>
+</div>
+<div class="w-[290px] sm:w-[340px] h-[225px] sm:h-[250px] flex-shrink-0 bg-[#f2f7f4] rounded-3xl p-5 sm:p-6 shadow-sm mx-3 flex flex-col justify-start text-left border border-teal-900/5">
+<div class="flex items-start justify-between mb-2.5">
+<div class="flex flex-col">
+<span class="font-bold text-slate-900 text-[15px] sm:text-[17px] tracking-tight">Handy
+                                            Nakita</span>
+<span class="text-[10px] sm:text-[15px] text-slate-500 font-medium mt-0.5">Klinik
+                                            Yogyakarta</span><span class="text-[10px] sm:text-[13px] text-slate-400 font-medium mt-0.5">1 Bulan yang Lalu</span>
+</div>
+<span class="text-teal-700 text-[17px] sm:text-[22px] tracking-widest font-extrabold flex-shrink-0">★★★★★</span>
+</div>
+<p class="text-slate-700 text-[15px] sm:text-[15px] leading-relaxed font-normal">
+                                    “Habis Scalling di sini. Dokternya ramah banget, wkt penanganan juga hati hati
+                                    banget, Worth it”
+                                </p>
+</div>
+<div class="w-[270px] sm:w-[320px] h-[225px] sm:h-[250px] flex-shrink-0 rounded-3xl overflow-hidden shadow-sm mx-3 border border-slate-200/60 group">
+<img alt="Pasien Hijab Biru Muda Cita Sehat Tertawa" class="w-full h-full object-cover transition-transform duration-500" loading="lazy" src="images/17_avatar_testi_5.jpg"/>
+</div>
+<div class="w-[290px] sm:w-[340px] h-[225px] sm:h-[250px] flex-shrink-0 bg-[#f2f7f4] rounded-3xl p-5 sm:p-6 shadow-sm mx-3 flex flex-col justify-start text-left border border-teal-900/5">
+<div class="flex items-start justify-between mb-2.5">
+<div class="flex flex-col">
+<span class="font-bold text-slate-900 text-[15px] sm:text-[17px] tracking-tight">Afrian
+                                            Hassan</span>
+<span class="text-[10px] sm:text-[15px] text-slate-500 font-medium mt-0.5">Klinik
+                                            Medan</span><span class="text-[10px] sm:text-[13px] text-slate-400 font-medium mt-0.5">6 Minggu Lalu</span>
+</div>
+<span class="text-teal-700 text-[17px] sm:text-[22px] tracking-widest font-extrabold flex-shrink-0">★★★★★</span>
+</div>
+<p class="text-slate-700 text-[15px] sm:text-[15px] leading-relaxed font-normal">
+                                    “Alhamdulillah pelayanan di sini bagus, Bidan sama bagian administrasi nya ramah
+                                    semua”
+                                </p>
+</div>
+<div class="w-[290px] sm:w-[340px] h-[225px] sm:h-[250px] flex-shrink-0 bg-[#f2f7f4] rounded-3xl p-5 sm:p-6 shadow-sm mx-3 flex flex-col justify-start text-left border border-teal-900/5">
+<div class="flex items-start justify-between mb-2.5">
+<div class="flex flex-col">
+<span class="font-bold text-slate-900 text-[15px] sm:text-[17px] tracking-tight">Velia
+                                            Sasmita</span>
+<span class="text-[10px] sm:text-[15px] text-slate-500 font-medium mt-0.5">Klinik
+                                            Pekanbaru</span><span class="text-[10px] sm:text-[13px] text-slate-400 font-medium mt-0.5">2 Minggu Lalu</span>
+</div>
+<span class="text-teal-700 text-[17px] sm:text-[22px] tracking-widest font-extrabold flex-shrink-0">★★★★★</span>
+</div>
+<p class="text-slate-700 text-[15px] sm:text-[15px] leading-relaxed font-normal line-clamp-4">
+                                    “Pelayanannya sangat ramah dan profesional. Dokter menjelaskan kondisi gigi dengan
+                                    jelas sehingga saya merasa lebih tenang, perawat nya baik dan ramah. Sangat puas
+                                    dengan pelayanannya.”
+                                </p>
+</div>
+<div class="w-[270px] sm:w-[320px] h-[225px] sm:h-[250px] flex-shrink-0 rounded-3xl overflow-hidden shadow-sm mx-3 border border-slate-200/60 group">
+<img alt="Pasien Ibu Berhijab Cokelat Cita Sehat Tertawa" class="w-full h-full object-cover transition-transform duration-500" loading="lazy" src="images/18_avatar_testi_6.jpg"/>
+</div>
+</div>
+<!-- Repeated Block 3 -->
+<div aria-hidden="true" class="flex items-center">
+<div class="w-[290px] sm:w-[340px] h-[225px] sm:h-[250px] flex-shrink-0 bg-[#f2f7f4] rounded-3xl p-5 sm:p-6 shadow-sm mx-3 flex flex-col justify-start text-left border border-teal-900/5">
+<div class="flex items-start justify-between mb-2.5">
+<div class="flex flex-col">
+<span class="font-bold text-slate-900 text-[15px] sm:text-[17px] tracking-tight">Dedy
+                                            Herawan</span>
+<span class="text-[10px] sm:text-[15px] text-slate-500 font-medium mt-0.5">Klinik
+                                            Jakarta</span><span class="text-[10px] sm:text-[13px] text-slate-400 font-medium mt-0.5">3 Minggu Lalu</span>
+</div>
+<span class="text-teal-700 text-[17px] sm:text-[22px] tracking-widest font-extrabold flex-shrink-0">★★★★★</span>
+</div>
+<p class="text-slate-700 text-[15px] sm:text-[15px] leading-relaxed font-normal">
+                                    “Alhamdulilah saya berobat di klinik pratama cita sehat saya sembuh penyakit saya
+                                    terimakasih”
+                                </p>
+</div>
+<div class="w-[270px] sm:w-[320px] h-[225px] sm:h-[250px] flex-shrink-0 rounded-3xl overflow-hidden shadow-sm mx-3 border border-slate-200/60 group">
+<img alt="Pasien Pria Cita Sehat Tersenyum Ramah" class="w-full h-full object-cover transition-transform duration-500" loading="lazy" src="images/16_avatar_testi_man.jpg"/>
+</div>
+<div class="w-[290px] sm:w-[340px] h-[225px] sm:h-[250px] flex-shrink-0 bg-[#f2f7f4] rounded-3xl p-5 sm:p-6 shadow-sm mx-3 flex flex-col justify-start text-left border border-teal-900/5">
+<div class="flex items-start justify-between mb-2.5">
+<div class="flex flex-col">
+<span class="font-bold text-slate-900 text-[15px] sm:text-[17px] tracking-tight">Handy
+                                            Nakita</span>
+<span class="text-[10px] sm:text-[15px] text-slate-500 font-medium mt-0.5">Klinik
+                                            Yogyakarta</span><span class="text-[10px] sm:text-[13px] text-slate-400 font-medium mt-0.5">1 Bulan yang Lalu</span>
+</div>
+<span class="text-teal-700 text-[17px] sm:text-[22px] tracking-widest font-extrabold flex-shrink-0">★★★★★</span>
+</div>
+<p class="text-slate-700 text-[15px] sm:text-[15px] leading-relaxed font-normal">
+                                    “Habis Scalling di sini. Dokternya ramah banget, wkt penanganan juga hati hati
+                                    banget, Worth it”
+                                </p>
+</div>
+<div class="w-[270px] sm:w-[320px] h-[225px] sm:h-[250px] flex-shrink-0 rounded-3xl overflow-hidden shadow-sm mx-3 border border-slate-200/60 group">
+<img alt="Pasien Hijab Biru Muda Cita Sehat Tertawa" class="w-full h-full object-cover transition-transform duration-500" loading="lazy" src="images/17_avatar_testi_5.jpg"/>
+</div>
+<div class="w-[290px] sm:w-[340px] h-[225px] sm:h-[250px] flex-shrink-0 bg-[#f2f7f4] rounded-3xl p-5 sm:p-6 shadow-sm mx-3 flex flex-col justify-start text-left border border-teal-900/5">
+<div class="flex items-start justify-between mb-2.5">
+<div class="flex flex-col">
+<span class="font-bold text-slate-900 text-[15px] sm:text-[17px] tracking-tight">Afrian
+                                            Hassan</span>
+<span class="text-[10px] sm:text-[15px] text-slate-500 font-medium mt-0.5">Klinik
+                                            Medan</span><span class="text-[10px] sm:text-[13px] text-slate-400 font-medium mt-0.5">6 Minggu Lalu</span>
+</div>
+<span class="text-teal-700 text-[17px] sm:text-[22px] tracking-widest font-extrabold flex-shrink-0">★★★★★</span>
+</div>
+<p class="text-slate-700 text-[15px] sm:text-[15px] leading-relaxed font-normal">
+                                    “Alhamdulillah pelayanan di sini bagus, Bidan sama bagian administrasi nya ramah
+                                    semua”
+                                </p>
+</div>
+<div class="w-[290px] sm:w-[340px] h-[225px] sm:h-[250px] flex-shrink-0 bg-[#f2f7f4] rounded-3xl p-5 sm:p-6 shadow-sm mx-3 flex flex-col justify-start text-left border border-teal-900/5">
+<div class="flex items-start justify-between mb-2.5">
+<div class="flex flex-col">
+<span class="font-bold text-slate-900 text-[15px] sm:text-[17px] tracking-tight">Velia
+                                            Sasmita</span>
+<span class="text-[10px] sm:text-[15px] text-slate-500 font-medium mt-0.5">Klinik
+                                            Pekanbaru</span><span class="text-[10px] sm:text-[13px] text-slate-400 font-medium mt-0.5">2 Minggu Lalu</span>
+</div>
+<span class="text-teal-700 text-[17px] sm:text-[22px] tracking-widest font-extrabold flex-shrink-0">★★★★★</span>
+</div>
+<p class="text-slate-700 text-[15px] sm:text-[15px] leading-relaxed font-normal line-clamp-4">
+                                    “Pelayanannya sangat ramah dan profesional. Dokter menjelaskan kondisi gigi dengan
+                                    jelas sehingga saya merasa lebih tenang, perawat nya baik dan ramah. Sangat puas
+                                    dengan pelayanannya.”
+                                </p>
+</div>
+<div class="w-[270px] sm:w-[320px] h-[225px] sm:h-[250px] flex-shrink-0 rounded-3xl overflow-hidden shadow-sm mx-3 border border-slate-200/60 group">
+<img alt="Pasien Ibu Berhijab Cokelat Cita Sehat Tertawa" class="w-full h-full object-cover transition-transform duration-500" loading="lazy" src="images/18_avatar_testi_6.jpg"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==========================================================================
+             SECTION 5.5: FAQ (PERTANYAAN UMUM)
+             ========================================================================= -->
+<section class="min- bg-white text-slate-800 relative flex flex-col justify-center pt-20 pb-6 lg:pt-24 lg:pb-8 border-t border-slate-200/60 overflow-hidden" id="faq">
+<div class="max-w-4xl mx-auto w-full px-4 sm:px-6 lg:px-8 z-10 flex-1 flex flex-col justify-center">
+<div class="text-center mb-8">
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-100 border border-teal-200/80 w-fit mb-2">
+<span class="text-teal-700 text-[15px] font-extrabold uppercase tracking-wider">Tanya Jawab</span>
+</div>
+<h2 class="text-[32px] sm:text-[32px] lg:text-[54px] font-extrabold text-slate-900 tracking-tight leading-tight mb-2">
+                        FAQ
+                    </h2>
+</div>
+<div class="max-w-3xl mx-auto w-full"><details class="group border-b border-gray-200"><summary class="cursor-pointer flex justify-between items-center py-4 font-bold list-none outline-none focus:outline-none select-none text-lg sm:text-xl"><span>Apakah ada layanan kesehatan lainnya?</span><span class="text-[22px] text-teal-600 font-normal transition-transform duration-300 group-open:rotate-45 flex items-center justify-center w-6 h-6">+</span></summary><div class="pb-4 leading-relaxed text-sm sm:text-base lg:text-lg text-slate-700">Tentu ada, ketersediaan layanan kesehatan tambahan menyesuaikan dengan fasilitas di masing-masing cabang. Silakan konsultasikan langsung kebutuhan Anda melalui WhatsApp kami.</div></details><details class="group border-b border-gray-200"><summary class="cursor-pointer flex justify-between items-center py-4 font-bold list-none outline-none focus:outline-none select-none text-lg sm:text-xl"><span>Berapa biaya layanan kesehatannya?</span><span class="text-[22px] text-teal-600 font-normal transition-transform duration-300 group-open:rotate-45 flex items-center justify-center w-6 h-6">+</span></summary><div class="pb-4 leading-relaxed text-sm sm:text-base lg:text-lg text-slate-700">Biaya layanan bervariasi menyesuaikan kebijakan di masing-masing cabang. Silakan hubungi kami untuk informasi tarif lebih detail di klinik terdekat.</div></details><details class="group border-b border-gray-200"><summary class="cursor-pointer flex justify-between items-center py-4 font-bold list-none outline-none focus:outline-none select-none text-lg sm:text-xl"><span>Kapan jadwal praktek dokternya?</span><span class="text-[22px] text-teal-600 font-normal transition-transform duration-300 group-open:rotate-45 flex items-center justify-center w-6 h-6">+</span></summary><div class="pb-4 leading-relaxed text-sm sm:text-base lg:text-lg text-slate-700">Jadwal praktek dokter berbeda-beda di setiap cabang. Silakan hubungi kami via WhatsApp untuk memastikan ketersediaan dokter dan mengatur jadwal kunjungan Anda.</div></details><details class="group border-b border-gray-200"><summary class="cursor-pointer flex justify-between items-center py-4 font-bold list-none outline-none focus:outline-none select-none text-lg sm:text-xl"><span>Apakah saya perlu reservasi?</span><span class="text-[22px] text-teal-600 font-normal transition-transform duration-300 group-open:rotate-45 flex items-center justify-center w-6 h-6">+</span></summary><div class="pb-4 leading-relaxed text-sm sm:text-base lg:text-lg text-slate-700">Kami sangat menyarankan Anda untuk melakukan reservasi agar terhindar dari antrean panjang. Namun, untuk kondisi darurat Anda tetap dipersilakan datang langsung.</div></details><details class="group border-b border-gray-200"><summary class="cursor-pointer flex justify-between items-center py-4 font-bold list-none outline-none focus:outline-none select-none text-lg sm:text-xl"><span>Apakah #SehatBersama itu subsidi silang?</span><span class="text-[22px] text-teal-600 font-normal transition-transform duration-300 group-open:rotate-45 flex items-center justify-center w-6 h-6">+</span></summary><div class="pb-4 leading-relaxed text-sm sm:text-base lg:text-lg text-slate-700">Tidak, tarif kami tetap terjangkau sesuai standar klinik. Kami hanya menyisihkan sebagian keuntungan klinik untuk didonasikan kepada mereka yang lebih membutuhkan.</div></details></div>
+<div class="mt-32 mb-4 text-center w-full">
+<div class="flex justify-center items-center gap-6 mb-6">
+<img alt="Logo Klinik Pratama" class="h-10 md:h-14 object-contain" src="images/02_logo_klinik_baru.jpg"/>
+<div class="h-8 md:h-12 w-px bg-slate-300"></div>
+<img alt="Logo Cita Sehat Foundation" class="h-7 md:h-10 object-contain" src="images/19_logo-csf-yayasan.jpg"/>
+</div>
+<h2 class="text-[32px] sm:text-[32px] lg:text-[54px] font-extrabold tracking-tight leading-tight">
+<span class="block sm:inline text-slate-900 mb-1 sm:mb-0">#SehatBersama </span>
+<span class="text-[#72BE44]" data-words="Keluarga|Komunitas|Masyarakat|Cita Sehat" id="footer-typewriter">Keluarga</span><span class="footer-cursor text-[#72BE44]">|</span>
+</h2>
+</div>
+<div class="mt-4 flex justify-center mb-32"><button class="flex items-center gap-2 bg-[#25D366] hover:bg-[#128C7E] text-white text-lg px-8 py-4 rounded-xl font-bold transition-all shadow-lg hover:shadow-xl hover:-translate-y-1" id="openWaModalBtn"><svg class="w-7 h-7" fill="currentColor" viewbox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg><span>Konsultasi Layanan Kesehatan</span></button></div>
+</div>
+</section>
+<!-- ==========================================================================
+             FOOTER SECTION (Rich Modern 5-Column Footer)
+             ========================================================================== -->
+<footer class="bg-white text-slate-800 border-t border-slate-200/60 relative flex flex-col z-10 overflow-hidden pt-8 pb-2" id="footer">
+<div class="flex-1 flex flex-col justify-center w-full my-auto">
+<div class="max-w-6xl mx-auto w-full px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
+<!-- Column 1: Logo -->
+<div class="space-y-4 text-left flex flex-col items-start justify-start">
+<a class="flex items-center w-fit" href="#hero-overview">
+<img alt="Logo Klinik Pratama Cita Sehat" class="h-16 sm:h-20 w-auto object-contain" fetchpriority="high" src="images/02_logo_klinik_baru.jpg"/>
+</a>
+<p class="text-slate-500 text-[14px] leading-relaxed max-w-sm mt-4">Klinik Pratama Cita Sehat menghadirkan pelayanan medis terpadu dengan dokter profesional dan fasilitas terpercaya. Agar semuanya bisa #SehatBersama.</p>
+</div>
+<!-- Column 2: Layanan -->
+<div class="space-y-4 text-left lg:ml-12">
+<h4 class="font-extrabold text-[15px] uppercase tracking-wider text-slate-900">Layanan</h4>
+<ul class="space-y-3 text-[15px]">
+<li><a class="text-slate-600 hover:text-emerald-700 transition-colors font-medium" href="#poli-umum">Poli Umum</a></li>
+<li><a class="text-slate-600 hover:text-emerald-700 transition-colors font-medium" href="#poli-gigi">Poli Gigi</a></li>
+<li><a class="text-slate-600 hover:text-emerald-700 transition-colors font-medium" href="#poli-kia">Poli KIA</a></li>
+<li><a class="text-slate-600 hover:text-emerald-700 transition-colors font-medium" href="#klinik-kami">Klinik Kami</a></li>
+<li><a class="text-slate-600 hover:text-emerald-700 transition-colors font-medium" href="#sehat-bersama">Tentang #SehatBersama</a></li>
+</ul>
+</div>
+<!-- Column 3: Ikuti Kami (Instagram per cabang) -->
+<div class="space-y-4 text-left">
+<h4 class="font-extrabold text-[15px] uppercase tracking-wider text-slate-900">Ikuti Kami</h4>
+<ul class="space-y-3 text-[15px]">
+<li>
+<a class="text-slate-600 hover:text-pink-600 transition-colors font-medium flex items-center gap-2" href="https://www.instagram.com/klinikcitasehatjakarta" target="_blank">
+<svg class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"></path></svg>
+                                    IG Klinik Cita Sehat Jakarta
+                                </a>
+</li>
+<li>
+<a class="text-slate-600 hover:text-pink-600 transition-colors font-medium flex items-center gap-2" href="https://www.instagram.com/klinikcitasehatyogyakarta" target="_blank">
+<svg class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"></path></svg>
+                                    IG Klinik Cita Sehat Yogyakarta
+                                </a>
+</li>
+<li>
+<a class="text-slate-600 hover:text-pink-600 transition-colors font-medium flex items-center gap-2" href="https://www.instagram.com/klinikcitasehatsemarang" target="_blank">
+<svg class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"></path></svg>
+                                    IG Klinik Cita Sehat Semarang
+                                </a>
+</li>
+<li>
+<a class="text-slate-600 hover:text-pink-600 transition-colors font-medium flex items-center gap-2" href="https://www.instagram.com/klinikcitasehatsurabaya" target="_blank">
+<svg class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"></path></svg>
+                                    IG Klinik Cita Sehat Surabaya
+                                </a>
+</li>
+<li>
+<a class="text-slate-600 hover:text-pink-600 transition-colors font-medium flex items-center gap-2" href="https://www.instagram.com/klinikcitasehatmedan" target="_blank">
+<svg class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"></path></svg>
+                                    IG Klinik Cita Sehat Medan
+                                </a>
+</li>
+<li>
+<a class="text-slate-600 hover:text-pink-600 transition-colors font-medium flex items-center gap-2" href="https://www.instagram.com/klinikcitasehatpekanbaru" target="_blank">
+<svg class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"></path></svg>
+                                    IG Klinik Cita Sehat Pekanbaru
+                                </a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="border-t border-slate-200/80 w-full mt-6 pt-4 pb-4">
+<p class="text-[15px] font-medium text-center text-slate-600">© 2026 Cita Sehat. Seluruh hak cipta dilindungi.</p>
+</div>
+</footer>
+</main>
+<!-- Modal Reservasi Janji Temu -->
+<div class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm hidden flex items-center justify-center p-4 transition-opacity duration-300 opacity-0" id="bookingModal">
+<div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl border border-slate-100 relative transform transition-transform duration-300 scale-95">
+<!-- Close Button -->
+<button class="absolute top-5 right-5 w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 flex items-center justify-center text-slate-500 hover:text-slate-800 transition-colors text-[22px] font-bold" id="closeBookingModal">
+                ×
+            </button>
+<!-- Modal Content (Empty for now) -->
+<h3 class="text-2xl font-bold text-slate-800 mb-6 text-center">Reservasi Jadwal</h3>
+<form class="space-y-4 text-left" id="newBookingForm">
+<div>
+<label class="block text-sm font-bold text-slate-700 mb-1">Pilih Klinik</label>
+<select class="w-full border border-slate-300 rounded-xl px-4 py-3 bg-slate-50 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:bg-white transition-colors" id="bookKlinik" required="">
+<option value="">-- Pilih Cabang Klinik --</option>
+<option value="Jakarta">Klinik Cita Sehat Jakarta Timur</option>
+<option value="Surabaya">Klinik Cita Sehat Surabaya</option>
+<option value="Yogyakarta">Klinik Cita Sehat Yogyakarta</option>
+<option value="Semarang">Klinik Cita Sehat Semarang</option>
+<option value="Medan">Klinik Cita Sehat Medan</option>
+<option value="Pekanbaru">Klinik Cita Sehat Pekanbaru</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-bold text-slate-700 mb-1">Pilih Poli</label>
+<select class="w-full border border-slate-300 rounded-xl px-4 py-3 bg-slate-50 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:bg-white transition-colors" id="bookPoli" required="">
+<option value="">-- Pilih Poli Tujuan --</option>
+<option value="Poli Umum">Poli Umum</option>
+<option value="Poli Gigi">Poli Gigi</option>
+<option value="Poli KIA">Poli KIA</option>
+<option value="Lainnya">Lainnya</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-bold text-slate-700 mb-1">Pilih Layanan</label>
+<select class="w-full border border-slate-300 rounded-xl px-4 py-3 bg-slate-50 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:bg-white transition-colors" id="bookLayanan" required="">
+<option value="">-- Pilih Layanan --</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-bold text-slate-700 mb-1">Kolom Keterangan <span class="font-normal text-slate-500">(Opsional)</span></label>
+<textarea class="w-full border border-slate-300 rounded-xl px-4 py-3 bg-slate-50 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:bg-white transition-colors resize-none" id="bookKeterangan" placeholder="Contoh: Anak saya demam 3 hari, khawatir ada apa-apa mau dicek." rows="3"></textarea>
+</div>
+<button class="w-full mt-4 bg-[#25D366] hover:bg-[#128C7E] text-white font-bold py-3.5 px-4 rounded-xl transition-colors flex items-center justify-center gap-2 shadow-md" type="submit">
+<svg class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg>
+                Kirim via WhatsApp
+            </button>
+</form>
+</div>
+</div>
+<!-- Interactive Script -->
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Scroll Snap Active Indicator Tracker & Header Theme Switcher
+            const scrollContainer = document.getElementById('scrollContainer');
+            const mainHeader = document.getElementById('mainHeader');
+            const heroOverview = document.getElementById('hero-overview');
+
+            function applyHeaderTheme(isScrolled) {
+                if (mainHeader) {
+                    if (isScrolled) {
+                        mainHeader.classList.add('scrolled-header');
+                    } else {
+                        mainHeader.classList.remove('scrolled-header');
+                    }
+                }
+            }
+
+            // 1. IntersectionObserver on Hero Section
+            if (heroOverview && 'IntersectionObserver' in window) {
+                const heroObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        const isScrolled = !entry.isIntersecting || entry.intersectionRatio < 0.4;
+                        applyHeaderTheme(isScrolled);
+                    });
+                }, {
+                    root: scrollContainer || null,
+                    threshold: [0, 0.2, 0.4, 0.6, 0.8, 1.0]
+                });
+                heroObserver.observe(heroOverview);
+            }
+
+            // 2. Direct Scroll Position Listener
+            function handleScroll() {
+                const currentScroll = scrollContainer ? scrollContainer.scrollTop : (window.pageYOffset || document.documentElement.scrollTop);
+                applyHeaderTheme(currentScroll > 40);
+            }
+
+            if (scrollContainer) {
+                scrollContainer.addEventListener('scroll', handleScroll, { passive: true });
+            }
+            window.addEventListener('scroll', handleScroll, { passive: true });
+            document.addEventListener('scroll', handleScroll, { passive: true });
+            handleScroll();
+
+            // Always start at top (Beranda) on page load/refresh
+            if ('scrollRestoration' in history) {
+                history.scrollRestoration = 'manual';
+            }
+            if (scrollContainer) {
+                scrollContainer.scrollTop = 0;
+            }
+            window.scrollTo(0, 0);
+
+            // Modal Trigger Logic
+            const modal = document.getElementById('bookingModal');
+            const closeModalBtn = document.getElementById('closeBookingModal');
+            const poliSelect = document.getElementById('bookPoli');
+            const dateInput = document.getElementById('bookDate');
+
+            function openModal(poliName = null) {
+                if (modal) {
+                    modal.classList.remove('hidden');
+                    modal.classList.add('flex');
+                    setTimeout(() => {
+                        modal.classList.remove('opacity-0');
+                        const inner = modal.querySelector('div');
+                        if (inner) inner.classList.remove('scale-95');
+                    }, 10);
+
+                    if (poliName && poliSelect) {
+                        for (let option of poliSelect.options) {
+                            if (option.value.toLowerCase().includes(poliName.toLowerCase()) || option.text.toLowerCase().includes(poliName.toLowerCase())) {
+                                option.selected = true;
+                                const ev = new Event('change');
+                                poliSelect.dispatchEvent(ev);
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
+
+            function closeModal() {
+                if (modal) {
+                    modal.classList.add('opacity-0');
+                    const inner = modal.querySelector('div');
+                    if (inner) inner.classList.add('scale-95');
+                    setTimeout(() => {
+                        modal.classList.add('hidden');
+                        modal.classList.remove('flex');
+                    }, 300);
+                }
+            }
+
+            // Bind all reservasi & booking triggers
+            document.querySelectorAll('.booking-trigger, #reservasiBtn, #drawerBookingBtn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const poli = btn.getAttribute('data-poli') || 'Poli Umum';
+                    if (typeof closeDrawer === 'function') closeDrawer();
+                    openModal(poli);
+                });
+            });
+
+            if (closeModalBtn) closeModalBtn.addEventListener('click', closeModal);
+            if (modal) {
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) closeModal();
+                });
+            }
+
+            // Drawer Toggle Logic
+            const hamburgerBtn = document.getElementById('hamburgerBtn');
+            const drawerOverlay = document.getElementById('drawerOverlay');
+            const drawerPanel = document.getElementById('drawerPanel');
+            const closeDrawerBtn = document.getElementById('closeDrawerBtn');
+            const drawerLinks = document.querySelectorAll('.drawer-link');
+
+            function openDrawer() {
+                if (drawerOverlay && drawerPanel) {
+                    drawerOverlay.classList.remove('hidden');
+                    setTimeout(() => {
+                        drawerOverlay.classList.remove('opacity-0');
+                        drawerPanel.classList.remove('translate-x-full');
+                    }, 10);
+                }
+            }
+
+            function closeDrawer() {
+                if (drawerOverlay && drawerPanel) {
+                    drawerOverlay.classList.add('opacity-0');
+                    drawerPanel.classList.add('translate-x-full');
+                    setTimeout(() => {
+                        drawerOverlay.classList.add('hidden');
+                    }, 300);
+                }
+            }
+
+            if (hamburgerBtn) hamburgerBtn.addEventListener('click', openDrawer);
+            if (closeDrawerBtn) closeDrawerBtn.addEventListener('click', closeDrawer);
+            if (drawerOverlay) {
+                drawerOverlay.addEventListener('click', (e) => {
+                    if (e.target === drawerOverlay) closeDrawer();
+                });
+            }
+            drawerLinks.forEach(link => {
+                link.addEventListener('click', closeDrawer);
+            });
+
+            // Interactive Map Hotspots & City Badges Sync & Direct Cabang Navigation
+            const hotspots = document.querySelectorAll('.clinic-hotspot');
+            const cityBadges = document.querySelectorAll('.city-badge');
+
+            cityBadges.forEach(badge => {
+                const cityName = badge.getAttribute('data-city');
+                
+                // Direct navigation to cabang page when clicked
+                badge.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    if (cityName) {
+                        window.location.href = `klinik.html?cabang=${cityName}`;
+                    }
+                });
+
+                const targetPin = document.querySelector(`.clinic-hotspot[data-city="${cityName}"]`);
+                if (!targetPin) return;
+
+                const tooltip = targetPin.querySelector('.hotspot-tooltip');
+                const core = targetPin.querySelector('.hotspot-core');
+                const ping = targetPin.querySelector('.hotspot-ping');
+
+                badge.addEventListener('mouseenter', () => {
+                    targetPin.classList.add('scale-125');
+                    if (tooltip) {
+                        tooltip.classList.remove('opacity-0', 'translate-y-2', '-translate-y-2');
+                        tooltip.classList.add('opacity-100', 'translate-y-0');
+                    }
+                    if (core) {
+                        core.classList.add('ring-4', 'ring-emerald-300/80', 'scale-150', 'bg-emerald-400', 'shadow-[0_0_30px_rgba(16,185,129,1)]');
+                    }
+                    if (ping) {
+                        ping.classList.add('scale-175', 'bg-emerald-400/80');
+                    }
+                });
+
+                badge.addEventListener('mouseleave', () => {
+                    targetPin.classList.remove('scale-125');
+                    if (tooltip) {
+                        tooltip.classList.remove('opacity-100', 'translate-y-0');
+                        tooltip.classList.add('opacity-0', 'translate-y-2');
+                    }
+                    if (core) {
+                        core.classList.remove('ring-4', 'ring-emerald-300/80', 'scale-150', 'bg-emerald-400', 'shadow-[0_0_30px_rgba(16,185,129,1)]');
+                    }
+                    if (ping) {
+                        ping.classList.remove('scale-175', 'bg-emerald-400/80');
+                    }
+                });
+            });
+
+            hotspots.forEach(pin => {
+                const cityName = pin.getAttribute('data-city');
+                
+                // Direct navigation to cabang page when hotspot pin is clicked
+                pin.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    if (cityName) {
+                        window.location.href = `klinik.html?cabang=${cityName}`;
+                    }
+                });
+
+                const targetBadge = document.querySelector(`.city-badge[data-city="${cityName}"]`);
+                if (!targetBadge) return;
+
+                pin.addEventListener('mouseenter', () => {
+                    targetBadge.classList.add('bg-slate-200', 'border-emerald-400', 'text-emerald-900', 'shadow-md');
+                });
+
+                pin.addEventListener('mouseleave', () => {
+                    targetBadge.classList.remove('bg-slate-200', 'border-emerald-400', 'text-emerald-900', 'shadow-md');
+                });
+            });
+
+            // WhatsApp Redirection
+            if (appointmentForm) {
+                appointmentForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const poli = document.getElementById('bookPoli').value;
+                    const name = document.getElementById('bookName').value.trim();
+                    const phone = document.getElementById('bookPhone').value.trim();
+                    const clinic = document.getElementById('bookClinic') ? document.getElementById('bookClinic').value : 'Klinik Cita Sehat';
+                    const date = document.getElementById('bookDate').value;
+
+                    const message = `Halo Admin Klinik Pratama Cita Sehat, saya ingin reservasi periksa:\n\n` +
+                        `• Nama Pasien: ${name}\n` +
+                        `• No. WA/HP: ${phone}\n` +
+                        `• Lokasi Klinik: ${clinic}\n` +
+                        `• Poli Tujuan: ${poli}\n` +
+                        `• Rencana Tanggal: ${date}\n\n` +
+                        `Mohon konfirmasi ketersediaan jadwal dokter. Terima kasih!`;
+
+                    // WhatsApp Numbers Mapping for all clinics
+                    const clinicPhones = {
+                        "Klinik Cita Sehat Medan": "6285297225670",
+                        "Klinik Cita Sehat Pekanbaru": "6285376376277",
+                        "Klinik Cita Sehat Surabaya": "6281231666192",
+                        "Klinik Cita Sehat Semarang": "6285786555595",
+                        "Klinik Cita Sehat Yogyakarta": "6285868580799",
+                        "Klinik Cita Sehat Jakarta Timur": "6281296063047"
+                    };
+                    const targetPhone = clinicPhones[clinic] || "6281234567890";
+                    const encodedMessage = encodeURIComponent(message);
+                    const waUrl = `https://wa.me/${targetPhone}?text=${encodedMessage}`;
+
+                    alert(`🎉 Terima kasih ${name}! Pendaftaran ${poli} di ${clinic} berhasil disiapkan. Anda akan diarahkan ke WhatsApp resmi Klinik Pratama Cita Sehat.`);
+                    window.open(waUrl, '_blank');
+                    closeModal();
+                    appointmentForm.reset();
+                });
+            }
+        });
+
+        // Smooth stop/start marquee on hover
+        document.querySelectorAll('.marquee-track-right, .marquee-track-left').forEach(track => {
+            let targetRate = 1;
+            let currentRate = 1;
+            let isAnimating = true;
+
+            function updateRate() {
+                // Smooth ease towards target
+                currentRate += (targetRate - currentRate) * 0.07;
+                
+                if (Math.abs(targetRate - currentRate) < 0.001) {
+                    currentRate = targetRate;
+                }
+                
+                track.getAnimations().forEach(anim => {
+                    anim.playbackRate = Math.max(0, currentRate);
+                });
+                
+                requestAnimationFrame(updateRate);
+            }
+            
+            requestAnimationFrame(updateRate);
+
+            track.addEventListener('mouseenter', () => {
+                targetRate = 0;
+            });
+            
+            track.addEventListener('mouseleave', () => {
+                targetRate = 1;
+            });
+        });
+    </script>
+<!-- WhatsApp Branches Modal -->
+<div class="fixed inset-0 z-[100] hidden items-start justify-center pt-20 px-4 sm:px-0" id="waModal">
+<!-- Backdrop -->
+<div class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm transition-opacity opacity-0" id="waModalBackdrop"></div>
+<!-- Modal Panel -->
+<div class="bg-white rounded-3xl shadow-2xl w-full max-w-md relative z-10 overflow-hidden transform -translate-y-10 opacity-0 transition-all duration-300" id="waModalPanel">
+<!-- Header -->
+<div class="bg-[#128C7E] px-6 py-4 flex justify-between items-center text-white">
+<h3 class="font-bold text-lg">Hubungi Cabang Klinik</h3>
+<button class="text-white hover:text-emerald-200 transition-colors" id="closeWaModalBtn">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+<!-- Body -->
+<div class="p-6">
+<p class="text-sm text-slate-600 mb-4 text-center">Silakan pilih cabang klinik terdekat dengan Anda untuk terhubung via WhatsApp.</p>
+<div class="flex flex-col gap-3">
+<a class="flex items-center justify-between p-3 rounded-xl border border-slate-200 hover:border-emerald-500 hover:bg-emerald-50 transition-colors group" href="https://wa.me/628111111111" target="_blank">
+<span class="font-bold text-slate-700 group-hover:text-emerald-700">Admin Klinik Jakarta</span>
+<span class="text-[#25D366]"><svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg></span>
+</a>
+<a class="flex items-center justify-between p-3 rounded-xl border border-slate-200 hover:border-emerald-500 hover:bg-emerald-50 transition-colors group" href="https://wa.me/628111111111" target="_blank">
+<span class="font-bold text-slate-700 group-hover:text-emerald-700">Admin Klinik Surabaya</span>
+<span class="text-[#25D366]"><svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg></span>
+</a>
+<a class="flex items-center justify-between p-3 rounded-xl border border-slate-200 hover:border-emerald-500 hover:bg-emerald-50 transition-colors group" href="https://wa.me/628111111111" target="_blank">
+<span class="font-bold text-slate-700 group-hover:text-emerald-700">Admin Klinik Yogyakarta</span>
+<span class="text-[#25D366]"><svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg></span>
+</a>
+<a class="flex items-center justify-between p-3 rounded-xl border border-slate-200 hover:border-emerald-500 hover:bg-emerald-50 transition-colors group" href="https://wa.me/628111111111" target="_blank">
+<span class="font-bold text-slate-700 group-hover:text-emerald-700">Admin Klinik Semarang</span>
+<span class="text-[#25D366]"><svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg></span>
+</a>
+<a class="flex items-center justify-between p-3 rounded-xl border border-slate-200 hover:border-emerald-500 hover:bg-emerald-50 transition-colors group" href="https://wa.me/628111111111" target="_blank">
+<span class="font-bold text-slate-700 group-hover:text-emerald-700">Admin Klinik Pekanbaru</span>
+<span class="text-[#25D366]"><svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg></span>
+</a>
+<a class="flex items-center justify-between p-3 rounded-xl border border-slate-200 hover:border-emerald-500 hover:bg-emerald-50 transition-colors group" href="https://wa.me/628111111111" target="_blank">
+<span class="font-bold text-slate-700 group-hover:text-emerald-700">Admin Klinik Medan</span>
+<span class="text-[#25D366]"><svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg></span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const openWaModalBtn = document.getElementById('openWaModalBtn');
+            const closeWaModalBtn = document.getElementById('closeWaModalBtn');
+            const waModal = document.getElementById('waModal');
+            const waModalBackdrop = document.getElementById('waModalBackdrop');
+            const waModalPanel = document.getElementById('waModalPanel');
+
+            function openWaModal() {
+                waModal.classList.remove('hidden');
+                waModal.classList.add('flex');
+                setTimeout(() => {
+                    waModalBackdrop.classList.remove('opacity-0');
+                    waModalPanel.classList.remove('opacity-0', '-translate-y-10');
+                }, 10);
+            }
+
+            function closeWaModal() {
+                waModalBackdrop.classList.add('opacity-0');
+                waModalPanel.classList.add('opacity-0', '-translate-y-10');
+                setTimeout(() => {
+                    waModal.classList.add('hidden');
+                    waModal.classList.remove('flex');
+                }, 300);
+            }
+
+            if (openWaModalBtn) openWaModalBtn.addEventListener('click', openWaModal);
+            if (closeWaModalBtn) closeWaModalBtn.addEventListener('click', closeWaModal);
+            if (waModalBackdrop) waModalBackdrop.addEventListener('click', closeWaModal);
+        });
+    </script>
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const dataLayanan = {
+                "Poli Umum": ["Biaya Pemeriksaan Umum", "Cek Gula/Asam Urat/Kolesterol", "Pasang Nebulizer", "Rawat Luka", "Khitan", "Layanan Lainnya"],
+                "Poli Gigi": ["Konsultasi Dokter Gigi", "Cabut Gigi", "Tambal Gigi", "Pembersihan Karang Gigi (Scaling)", "Perawatan Saluran Akar", "Layanan Lainnya"],
+                "Poli KIA": ["Pemeriksaan Kehamilan (ANC)", "Imunisasi Anak", "Konsultasi Keluarga Berencana (KB)", "Pemeriksaan Tumbuh Kembang Bayi", "Senam Hamil", "Layanan Lainnya"],
+                "Lainnya": ["Layanan Lainnya"]
+            };
+
+            const waNumbers = {
+                "Jakarta": "6281296063047",
+                "Surabaya": "6281231666192",
+                "Yogyakarta": "6285868580799",
+                "Semarang": "6285786555595",
+                "Medan": "6285297225670",
+                "Pekanbaru": "6285376376277"
+            };
+
+            const bookPoli = document.getElementById('bookPoli');
+            const bookLayanan = document.getElementById('bookLayanan');
+            const bookKeterangan = document.getElementById('bookKeterangan');
+
+            function updatePlaceholder() {
+                if (bookPoli.value === "Poli Umum") {
+                    bookKeterangan.placeholder = "Contoh: Apakah ada layanan untuk penjahitan luka? Orang tua saya baru saja jatuh dan lukanya cukup dalam.";
+                } else if (bookPoli.value === "Poli Gigi") {
+                    bookKeterangan.placeholder = "Contoh: Apakah ada layanan untuk pasang gigi palsu? Pasangan saya kesulitan makan karena giginya banyak yang tanggal.";
+                } else {
+                    bookKeterangan.placeholder = "Contoh: Apakah ada layanan untuk konsultasi gizi? Anak saya sudah sebulan ini berat badannya tidak naik.";
+                }
+            }
+
+            if (bookPoli) {
+                bookPoli.addEventListener('change', function() {
+                    const selected = this.value;
+                    const options = dataLayanan[selected] || [];
+                    bookLayanan.innerHTML = '<option value="">-- Pilih Layanan --</option>';
+                    options.forEach(opt => {
+                        const el = document.createElement('option');
+                        el.value = opt;
+                        el.textContent = opt;
+                        bookLayanan.appendChild(el);
+                    });
+                    updatePlaceholder();
+                });
+            }
+
+            document.querySelectorAll('.booking-trigger').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    setTimeout(() => {
+                        if (bookPoli) {
+                            const ev = new Event('change');
+                            bookPoli.dispatchEvent(ev);
+                        }
+                    }, 50);
+                });
+            });
+            
+            // Also update immediately on load
+            if (bookPoli) updatePlaceholder();
+
+            const bookingForm = document.getElementById('newBookingForm');
+            if (bookingForm) {
+                bookingForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const klinik = document.getElementById('bookKlinik').value;
+                    const poli = document.getElementById('bookPoli').value;
+                    const layanan = document.getElementById('bookLayanan').value;
+                    const ket = document.getElementById('bookKeterangan').value.trim();
+                    
+                    let msg = `Halo kak, saya habis lihat websitenya. Mau reservasi untuk ${layanan} di Klinik Cita Sehat ${klinik}, apa bisa dibantu?`;
+                    
+                    if (ket) {
+                        msg += `\n\n---\n\n${ket}`;
+                    }
+                    
+                    const no = waNumbers[klinik] || "6281234567890";
+                    const waUrl = `https://wa.me/${no}?text=${encodeURIComponent(msg)}`;
+                    
+                    window.open(waUrl, '_blank');
+                    
+                    const closeBtn = document.getElementById('closeBookingModal');
+                    if (closeBtn) closeBtn.click();
+                    
+                    bookingForm.reset();
+                    bookLayanan.innerHTML = '<option value="">-- Pilih Layanan --</option>';
+                    updatePlaceholder();
+                });
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const twSpan = document.getElementById('footer-typewriter');
+            if (twSpan) {
+                const words = twSpan.getAttribute('data-words').split('|');
+                let currentWordIndex = 0;
+                let currentText = words[0];
+                let isDeleting = false;
+                let textIndex = currentText.length;
+                let timer;
+
+                function type() {
+                    const targetWord = words[currentWordIndex];
+                    
+                    if (isDeleting) {
+                        currentText = targetWord.substring(0, textIndex - 1);
+                        textIndex--;
+                    } else {
+                        currentText = targetWord.substring(0, textIndex + 1);
+                        textIndex++;
+                    }
+
+                    twSpan.textContent = currentText;
+
+                    let typeSpeed = isDeleting ? 50 : 100;
+
+                    if (!isDeleting && currentText === targetWord) {
+                        typeSpeed = 2250; // Cut 25% of 3000
+                        isDeleting = true;
+                    } else if (isDeleting && currentText === '') {
+                        isDeleting = false;
+                        currentWordIndex = (currentWordIndex + 1) % words.length;
+                        typeSpeed = 500;
+                    }
+
+                    timer = setTimeout(type, typeSpeed);
+                }
+
+                timer = setTimeout(type, 2250);
+            }
+        });
+    </script>
+</body>
+</html>

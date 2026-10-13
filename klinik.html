@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Cabang Klinik - Klinik Pratama Cita Sehat</title>
+    
+    <!-- Meta SEO -->
+    <meta name="description" content="Detail cabang dan layanan kesehatan Klinik Pratama Cita Sehat. Temukan alamat, dokter ahli, jam buka, dan kontak WhatsApp kami.">
+    <link rel="icon" type="image/png" href="https://klinik.citasehat.org/wp-content/uploads/2026/10/02_logo_klinik_baru.jpg">
+    
+    <!-- Tailwind CSS Play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#e8f5e9',
+                            100: '#c8e6c9',
+                            500: '#8fc74a',
+                            700: '#166534',
+                            900: '#0e382b',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        h1, h2, h3, .font-display {
+            font-family: 'Outfit', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased min-h-screen flex flex-col justify-between">
+
+    <!-- Top Fixed Navigation Header -->
+    <header class="bg-[#e8f5e9] border-b border-emerald-100/50 py-4 sticky top-0 z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3.5 sm:gap-4 group">
+                <img src="https://klinik.citasehat.org/wp-content/uploads/2026/10/02_logo_klinik_baru.jpg" alt="Logo Klinik Pratama Cita Sehat" class="h-10 sm:h-13 md:h-16 w-auto object-contain transition-transform group-hover:scale-105 drop-shadow-sm">
+                <span class="font-extrabold text-xl sm:text-2xl text-emerald-950 tracking-tight transition-colors duration-300">
+                    Klinik Pratama Cita Sehat
+                </span>
+            </a>
+            <div class="flex items-center gap-2">
+                <a href="tarif.html" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs sm:text-sm shadow-sm transition-all active:scale-95">
+                    <span>💳 Tarif &amp; Layanan</span>
+                </a>
+                <a href="index.html" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-emerald-900/10 hover:bg-emerald-900/20 text-emerald-950 font-bold text-xs sm:text-sm shadow-sm transition-all active:scale-95">
+                    <span>← Beranda</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Dynamic Container -->
+    <main class="flex-1 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+        <div id="loadingState" class="flex flex-col items-center justify-center py-20">
+            <div class="w-12 h-12 border-4 border-brand-500 border-t-transparent rounded-full animate-spin"></div>
+            <p class="mt-4 text-slate-500 font-medium">Memuat detail cabang...</p>
+        </div>
+
+        <!-- Dynamic Content wrapper -->
+        <div id="clinicContent" class="hidden space-y-12">
+            
+            <!-- Hero Card: Clinic Name, Address, WhatsApp Booking Button -->
+            <div class="relative bg-white rounded-3xl p-6 sm:p-10 lg:p-12 shadow-md border border-slate-100 overflow-hidden flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
+                <!-- Decorative Glow -->
+                <div class="absolute -top-12 -left-12 w-48 h-48 bg-brand-50 rounded-full blur-3xl opacity-60"></div>
+                
+                <!-- Main Info text -->
+                <div class="flex-1 relative z-10 text-left w-full">
+                    <h1 id="clinicTitle" class="text-2xl sm:text-3xl lg:text-4xl font-medium text-slate-900 tracking-tight leading-tight mb-4">
+                        Klinik Pratama Cita Sehat Cabang
+                    </h1>
+                    
+                    <p id="clinicAddress" class="text-base sm:text-lg text-slate-600 mb-6 flex items-start gap-2.5">
+                        <span class="text-xl">📍</span>
+                        <span>Alamat Cabang...</span>
+                    </p>
+                    
+                    <!-- Direct Action buttons -->
+                    <div class="flex flex-wrap gap-4 pt-2">
+                        <button id="btnMainBooking" class="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-base shadow-lg shadow-emerald-600/30 transition-all hover:scale-105 active:scale-95 w-full sm:w-auto">
+                            <span>Hubungi Kami</span>
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </button>
+                        <a id="btnMapDirection" target="_blank" href="#" class="inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-base transition-all hover:scale-105 active:scale-95 w-full sm:w-auto border border-slate-200/60">
+                            <span>Lihat di Maps</span>
+                            <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" fill="#EA4335" />
+                                <path d="M12 2C8.13 2 5 5.13 5 9c0 1.83.52 3.53 1.42 4.97L12 2z" fill="#FBBC05" />
+                                <path d="M12 22s7-7.75 7-13c0-1.83-.52-3.53-1.42-4.97L12 22z" fill="#34A853" />
+                                <path d="M12 13.5a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9z" fill="#4285F4" />
+                                <circle cx="12" cy="9" r="2.5" fill="#FFFFFF" />
+                            </svg>
+                        </a>
+                        <a id="btnInstagramBranch" target="_blank" href="#" class="inline-flex items-center justify-center gap-2.5 px-6 py-4 rounded-full bg-pink-50 hover:bg-pink-100 text-pink-700 font-bold text-base transition-all hover:scale-105 active:scale-95 w-full sm:w-auto border border-pink-200">
+                            <svg class="w-5 h-5 shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                            <span>Instagram Cabang</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Side Graphic: Dynamic Image Carousel -->
+                <div class="w-full lg:w-[460px] shrink-0">
+                    <div class="relative rounded-3xl overflow-hidden aspect-[4/3] bg-emerald-50 shadow-md border border-slate-100 group">
+                        <!-- Carousel Wrapper -->
+                        <div id="carouselWrapper" class="w-full h-full flex transition-transform duration-500 ease-out">
+                            <!-- Images loaded dynamically -->
+                        </div>
+                        
+                        <!-- Navigation Arrows -->
+                        <button onclick="prevSlide()" class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 backdrop-blur hover:bg-white text-slate-800 flex items-center justify-center shadow-md hover:scale-105 active:scale-95 transition-all opacity-0 group-hover:opacity-100 focus:opacity-100 cursor-pointer z-10">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                            </svg>
+                        </button>
+                        <button onclick="nextSlide()" class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 backdrop-blur hover:bg-white text-slate-800 flex items-center justify-center shadow-md hover:scale-105 active:scale-95 transition-all opacity-0 group-hover:opacity-100 focus:opacity-100 cursor-pointer z-10">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </button>
+
+                        <!-- Indicator Dots -->
+                        <div id="carouselDots" class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
+                            <!-- Dots loaded dynamically -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dynamic Tabbed Information (Fasilitas, Layanan, Testimoni) -->
+            <div class="bg-white rounded-3xl p-6 sm:p-10 shadow-md border border-slate-100 relative">
+                <!-- Sticky Tabs Navigation -->
+                <div class="sticky top-[72px] sm:top-[80px] bg-white/95 backdrop-blur z-30 border-b border-slate-200 -mx-6 sm:-mx-10 px-6 sm:px-10 py-1">
+                    <nav class="flex gap-8 -mb-px" aria-label="Tabs">
+                        <button onclick="switchTab('fasilitas')" id="tab-fasilitas" class="tab-btn border-b-2 border-emerald-600 py-4 px-1 text-sm font-extrabold text-emerald-700 transition-all cursor-pointer">
+                            Fasilitas
+                        </button>
+                        <button onclick="switchTab('layanan')" id="tab-layanan" class="tab-btn border-b-2 border-transparent py-4 px-1 text-sm font-bold text-slate-500 hover:text-slate-700 hover:border-slate-300 transition-all cursor-pointer">
+                            Layanan
+                        </button>
+                        <button onclick="switchTab('testimoni')" id="tab-testimoni" class="tab-btn border-b-2 border-transparent py-4 px-1 text-sm font-bold text-slate-500 hover:text-slate-700 hover:border-slate-300 transition-all cursor-pointer">
+                            Testimoni
+                        </button>
+                    </nav>
+                </div>
+
+                <!-- Section Contents stacked vertically -->
+                <div class="space-y-4">
+                    <!-- Section: Fasilitas -->
+                    <div id="sec-fasilitas" class="scrollspy-section py-8 border-b border-slate-100 text-left space-y-6">
+                        <h3 class="text-xl sm:text-2xl font-bold text-slate-900 mb-2">Fasilitas</h3>
+                        <div id="facilityDescription" class="space-y-4 text-slate-600 leading-relaxed text-sm sm:text-base font-normal">
+                            <!-- Dynamic description paragraphs -->
+                        </div>
+                        
+                        <div class="pt-6 border-t border-slate-100">
+                            <h4 class="font-extrabold text-slate-900 text-base sm:text-lg mb-4">Fasilitas:</h4>
+                            <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5 text-slate-700 font-medium text-xs sm:text-sm">
+                                <li class="flex items-center gap-2.5">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-600 shrink-0"></span> Welcome drink
+                                </li>
+                                <li class="flex items-center gap-2.5">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-600 shrink-0"></span> Program menarik
+                                </li>
+                                <li class="flex items-center gap-2.5">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-600 shrink-0"></span> Ruang tunggu estetik
+                                </li>
+                                <li class="flex items-center gap-2.5">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-600 shrink-0"></span> Layanan dokter profesional
+                                </li>
+                                <li class="flex items-center gap-2.5">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-600 shrink-0"></span> Dukungan layanan asuransi
+                                </li>
+                                <li class="flex items-center gap-2.5">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-600 shrink-0"></span> Opsi pembayaran fleksibel
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Section: Layanan -->
+                    <div id="sec-layanan" class="scrollspy-section py-8 border-b border-slate-100 text-left space-y-6">
+                        <h3 class="text-xl sm:text-2xl font-bold text-slate-900 mb-2">Layanan &amp; Jadwal Dokter</h3>
+                        
+                        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                            <!-- Left: Jam Operasional (5 cols) -->
+                            <div class="lg:col-span-5 bg-slate-50 rounded-3xl p-6 sm:p-8 border border-slate-100">
+                                <h4 class="text-lg font-bold text-slate-900 tracking-tight mb-5 flex items-center gap-2.5">
+                                    <span>🕒</span> Jam Operasional
+                                </h4>
+                                <ul class="space-y-3.5 text-sm sm:text-base font-medium text-slate-700">
+                                    <li class="flex items-center justify-between pb-3.5 border-b border-slate-200/60">
+                                        <span>Senin - Sabtu</span>
+                                        <span class="text-emerald-800 font-bold">08.00 - 21.00 WIB</span>
+                                    </li>
+                                    <li class="flex items-center justify-between pb-3.5 border-b border-slate-200/60">
+                                        <span>Minggu &amp; Hari Libur</span>
+                                        <span class="text-rose-600 font-bold">Tutup</span>
+                                    </li>
+                                    <li class="flex items-center justify-between">
+                                        <span>Pendaftaran Terakhir</span>
+                                        <span class="text-slate-500">20.30 WIB</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <!-- Right: Tim Dokter (7 cols) -->
+                            <div class="lg:col-span-7 bg-slate-50 rounded-3xl p-6 sm:p-8 border border-slate-100">
+                                <h4 class="text-lg font-bold text-slate-900 tracking-tight mb-6 flex items-center gap-2.5">
+                                    <span>🩺</span> Tim Dokter Spesialis &amp; Bidan Kami
+                                </h4>
+                                <div id="doctorList" class="space-y-4">
+                                    <!-- Dynamic doctors -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Full Width: Tabel Jadwal Mingguan Dokter -->
+                        <div class="bg-slate-50 rounded-3xl p-6 sm:p-8 border border-slate-100 space-y-4 mt-6">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-200/80 pb-4">
+                                <div>
+                                    <h4 class="text-lg font-bold text-slate-900 tracking-tight flex items-center gap-2.5">
+                                        <span>📅</span> Jadwal Praktek Dokter (Senin - Sabtu)
+                                    </h4>
+                                    <p class="text-xs text-slate-500 mt-1">Jadwal praktek dokter resmi berdasarkan data operasional klinik. Klik reservasi untuk pendaftaran online.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-xs">
+                                <table class="w-full text-left border-collapse min-w-[700px]">
+                                    <thead>
+                                        <tr class="bg-slate-100/90 border-b border-slate-200 text-xs font-bold text-slate-700 uppercase tracking-wider">
+                                            <th class="py-3.5 px-4 w-1/4">Dokter &amp; Layanan</th>
+                                            <th class="py-3.5 px-2 text-center">Senin</th>
+                                            <th class="py-3.5 px-2 text-center">Selasa</th>
+                                            <th class="py-3.5 px-2 text-center">Rabu</th>
+                                            <th class="py-3.5 px-2 text-center">Kamis</th>
+                                            <th class="py-3.5 px-2 text-center">Jumat</th>
+                                            <th class="py-3.5 px-2 text-center">Sabtu</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="scheduleTableBody" class="divide-y divide-slate-100 text-xs sm:text-sm font-medium text-slate-700">
+                                        <!-- Dynamic schedule rows -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section: Testimoni -->
+                    <div id="sec-testimoni" class="scrollspy-section py-8 text-left space-y-6">
+                        <h3 class="text-xl sm:text-2xl font-bold text-slate-900 mb-2">Testimoni Pasien</h3>
+                        <div id="branchTestimonialList" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <!-- Dynamic testimonials -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer Bottom Bar inside Card -->
+                <footer class="text-center text-xs text-slate-500 pt-8 mt-8 border-t border-slate-100 bg-white">
+                    © 2026 Klinik Pratama Cita Sehat &bull; Sahabat Sehat Keluarga Anda
+                </footer>
+            </div>
+        </div>
+    </main>
+
+    <!-- Clinic Database and Router Script -->
+    <script>
+        const clinicsDB = {
+            medan: {
+                title: "Klinik Pratama Cita Sehat Medan",
+                badge: "Cabang Medan (Sumatera Utara)",
+                address: "Jalan Setia Budi No. 46, Ps II Tj. Sari, Kec. Medan Selayang, Kota Medan, Sumatera Utara 20131",
+                whatsapp: "6285297225670",
+                mapLink: "https://maps.google.com/?q=Klinik+Pratama+Cita+Sehat+Medan",
+                images: [
+                    "https://klinik.citasehat.org/wp-content/uploads/2026/10/Foto-Depan-Klinik.jpg",
+                    "https://klinik.citasehat.org/wp-content/uploads/2026/10/Medan-FO-1.jpg",
+                    "https://klinik.citasehat.org/wp-content/uploads/2026/10/Medan-Poli-Gigi.jpg",
+                    "https://klinik.citasehat.org/wp-content/uploads/2026/10/Medan-Poli-KIA-2.jpg"
+                ],
+                doctors: [
+                    { name: "Dr. Ahmad Faisal", role: "Dokter Umum Utama", desc: "Berpengalaman 8+ tahun dalam diagnosa dasar dan penanganan keluhan umum pasien." },
+                    { name: "Drg. Sarah Siregar", role: "Dokter Gigi", desc: "Ahli dalam penanganan karies, pencabutan gigi, penambalan, dan perawatan estetik gigi." },
+                    { name: "Bidan Maria Ulfa", role: "Bidan (Poli KIA)", desc: "Pemeriksaan kehamilan berkala, konsultasi tumbuh kembang anak, dan program KB." }
+                ],
+                testimonials: [
+                    { name: "Denny Rian", rating: "★★★★★", date: "2 Minggu Lalu", text: "Sangat puas dengan penanganan dokter umumnya. Sangat komunikatif dan obat yang diberikan sangat cocok untuk radang tenggorokan saya." },
+                    { name: "Aulia Putri", rating: "★★★★★", date: "1 Bulan Lalu", text: "Bidan di Poli KIA sangat ramah dan sabar ketika menjelaskan tumbuh tumbuh kembang anak saya. Recommended!" }
+                ]
+            },
+            pekanbaru: {
+                title: "Klinik Pratama Cita Sehat Pekanbaru",
+                badge: "Cabang Pekanbaru (Riau)",
+                address: "Jl. Nenas No.11, Jadirejo, Sukajadi, Kota Pekanbaru, Riau 28284",
+                whatsapp: "6285376376277",
+                mapLink: "https://www.google.com/maps/search/?api=1&query=Klinik+Pratama+Cita+Sehat+Pekanbaru+Jl.+Nenas+No.11+Jadirejo+Sukajadi+Kota+Pekanbaru+Riau+28284",
+                images: [
+                    "https://klinik.citasehat.org/wp-content/uploads/2026/10/Pekanbaru-1.jpg",
+                    "https://klinik.citasehat.org/wp-content/uploads/2026/10/FO-1.jpg",
+                    "https://klinik.citasehat.org/wp-content/uploads/2026/10/IGD-2.jpg",
+                    "https://klinik.citasehat.org/wp-content/uploads/2026/10/Poli-Gigi-1.jpg",
+                    "https://klinik.citasehat.org/wp-content/uploads/2026/10/Poli-Gigi-2.jpg"
+                ],
+                doctors: [
+                    { name: "dr. Sefni Fifiona", role: "Dokter Umum", desc: "Penanganan penyakit umum, konsultasi preventif, dan pemeriksaan medis rutin keluarga." },
+                    { name: "dr. Yuliana Khairi", role: "Dokter Umum", desc: "Konsultasi kesehatan primer, diagnosa dini, serta pengelolaan penyakit kronis." },
+                    { name: "dr. Tiara Mardhalifa", role: "Dokter Umum (Vaksin Haji & Umroh)", desc: "Layanan vaksinasi internasional resmi, tes kesehatan pra-keberangkatan haji & umroh." },
+                    { name: "drg. Ratu Helena W, MARS", role: "Dokter Gigi", desc: "Perawatan estetika gigi, pembersihan karang (scaling), pencabutan, dan penambalan komposit." },
+                    { name: "Bidan Amelia Susanti, AMd.Keb", role: "Bidan (Poli KIA & USG)", desc: "Pemeriksaan kehamilan (ANC), USG dasar, imunisasi bayi, dan pelayanan program KB." }
+                ],
+                schedules: [
+                    { poli: "🩺 Poli Umum", doctor: "dr. Sefni Fifiona", shifts: { senin: "08.30 - 20.30", selasa: "OFF", rabu: "OFF", kamis: "08.30 - 20.30", jumat: "08.30 - 20.30", sabtu: "08.30 - 20.30" } },
+                    { poli: "🩺 Poli Umum", doctor: "dr. Yuliana Khairi", shifts: { senin: "OFF", selasa: "08.30 - 20.30", rabu: "08.30 - 20.30", kamis: "OFF", jumat: "OFF", sabtu: "OFF" } },
+                    { poli: "🩺 Poli Umum", doctor: "dr. Tiara Mardhalifa (Vaksin Haji & Umroh)", shifts: { senin: "Dengan Perjanjian", selasa: "Dengan Perjanjian", rabu: "Dengan Perjanjian", kamis: "Dengan Perjanjian", jumat: "Dengan Perjanjian", sabtu: "Dengan Perjanjian" } },
+                    { poli: "🦷 Poli Gigi", doctor: "drg. Ratu Helena W, MARS", shifts: { senin: "15.00 - 20.30", selasa: "15.00 - 20.30", rabu: "15.00 - 20.30", kamis: "15.00 - 20.30", jumat: "15.00 - 20.30", sabtu: "OFF" } },
+                    { poli: "👶 Poli KIA", doctor: "Bidan Amelia Susanti AMd.Keb", shifts: { senin: "08.00 - 15.00", selasa: "08.00 - 15.00", rabu: "08.00 - 15.00", kamis: "08.00 - 15.00", jumat: "08.00 - 15.00", sabtu: "08.00 - 15.00" } },
+                    { poli: "🏥 Homecare", doctor: "Homecare Luka Diabetes & Post Op", shifts: { senin: "24 Jam", selasa: "24 Jam", rabu: "24 Jam", kamis: "24 Jam", jumat: "24 Jam", sabtu: "24 Jam" } },
+                    { poli: "👶 Homecare", doctor: "Homecare Bayi Baru Lahir", shifts: { senin: "Sesuai Bidan", selasa: "Sesuai Bidan", rabu: "Sesuai Bidan", kamis: "Sesuai Bidan", jumat: "Sesuai Bidan", sabtu: "Sesuai Bidan" } },
+                    { poli: "🔍 USG", doctor: "Pemeriksaan USG Kandungan", shifts: { senin: "OFF", selasa: "09.00 - 16.00", rabu: "OFF", kamis: "OFF", jumat: "OFF", sabtu: "09.00 - 14.00" } }
+                ],
+                testimonials: [
+                    { name: "Rahma Aulia", rating: "★★★★★", date: "2 Minggu Lalu", text: "Scaling gigi disini sangat nyaman dan terjangkau harganya. Dokternya menjelaskan detail pencegahan karang gigi." },
+                    { name: "Fikri Ramadhan", rating: "★★★★★", date: "1 Bulan Lalu", text: "Fasilitas bersih and pendaftaran online via WhatsApp sangat cepat responnya." }
+                ]
+            },
+
+            jakarta: {
+                title: "Klinik Pratama Cita Sehat Jakarta Timur",
+                badge: "Cabang Jakarta Timur (DKI Jakarta)",
+                address: "Jl. Cipinang Elok II No.12 Blk O, RT.5/RW.10, Cipinang Muara, Kecamatan Jatinegara, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta",
+                whatsapp: "6281296063047",
+                mapLink: "https://www.google.com/maps/search/?api=1&query=Klinik+Pratama+Cita+Sehat+Jakarta+Jl.+Cipinang+Elok+II+No.12+Blk+O+RT.5+RW.10+Cipinang+Muara+Kecamatan+Jatinegara+Kota+Jakarta+Timur",
+                images: [
+                    "https://klinik.citasehat.org/wp-content/uploads/2026/10/Jakarta-2.jpeg",
+                    "https://klinik.citasehat.org/wp-content/uploads/2026/10/20240902_110949.jpg",
+                    "https://klinik.citasehat.org/wp-content/uploads/2026/10/20240902_111245.jpg",
+                    "https://klinik.citasehat.org/wp-content/uploads/2026/10/20240902_111301.jpg"
+                ],
+                doctors: [
+                    { name: "dr. Agung Zentyo Wibowo", role: "Dokter Umum", desc: "Pemeriksaan medis rutin, konsultasi kesehatan umum, dan diagnosa awal penyakit." },
+                    { name: "dr. Iqbal Afdi Ferdiansyah", role: "Dokter Umum", desc: "Penanganan keluhan medis akut, konsultasi gaya hidup sehat, dan pengobatan dasar." },
+                    { name: "dr. Mohamad Iqbal", role: "Dokter Umum", desc: "Pelayanan konsultasi kesehatan keluarga, manajemen terapi obat, dan evaluasi medis." },
+                    { name: "dr. Umi Astarawati", role: "Dokter Umum & USG", desc: "Pemeriksaan kesehatan terpadu dan layanan pemeriksaan USG kandungan berkala." },
+                    { name: "drg. Hermi Rahmawati", role: "Dokter Gigi", desc: "Penambalan estetika, perawatan karang gigi (scaling), dan konsultasi kesehatan mulut." },
+                    { name: "Suci Febriyanti, A.Md.Keb", role: "Bidan (Poli KIA)", desc: "Pendampingan kesehatan ibu hamil, imunisasi balita terpadu, serta konsultasi KB." }
+                ],
+                schedules: [
+                    { poli: "🩺 Poli Umum", doctor: "dr. Agung Zentyo Wibowo", shifts: { senin: "09.00 - 16.00", selasa: "OFF", rabu: "OFF", kamis: "OFF", jumat: "OFF", sabtu: "OFF" } },
+                    { poli: "🩺 Poli Umum", doctor: "dr. Iqbal Afdi Ferdiansyah", shifts: { senin: "17.00 - 21.00", selasa: "17.00 - 21.00", rabu: "OFF", kamis: "OFF", jumat: "OFF", sabtu: "17.00 - 21.00" } },
+                    { poli: "🩺 Poli Umum", doctor: "dr. Mohamad Iqbal", shifts: { senin: "OFF", selasa: "OFF", rabu: "09.00 - 16.00", kamis: "09.00 - 16.00", jumat: "OFF", sabtu: "OFF" } },
+                    { poli: "🩺 Poli Umum", doctor: "dr. Umi Astarawati", shifts: { senin: "OFF", selasa: "09.00 - 16.00", rabu: "OFF", kamis: "OFF", jumat: "OFF", sabtu: "09.00 - 14.00" } },
+                    { poli: "🩺 Poli Umum", doctor: "dr. Adrianshah", shifts: { senin: "OFF", selasa: "OFF", rabu: "17.00 - 21.00", kamis: "17.00 - 21.00", jumat: "17.00 - 21.00", sabtu: "OFF" } },
+                    { poli: "🩺 Poli Umum", doctor: "dr. Desrita", shifts: { senin: "OFF", selasa: "OFF", rabu: "OFF", kamis: "OFF", jumat: "09.00 - 16.00", sabtu: "OFF" } },
+                    { poli: "🦷 Poli Gigi", doctor: "drg. Hermi Rahmawati", shifts: { senin: "Dengan Perjanjian", selasa: "18.00 - 21.00", rabu: "Dengan Perjanjian", kamis: "Dengan Perjanjian", jumat: "18.00 - 21.00", sabtu: "09.00 - 13.00" } },
+                    { poli: "🔍 USG", doctor: "dr. Umi Astarawati", shifts: { senin: "OFF", selasa: "09.00 - 16.00", rabu: "OFF", kamis: "OFF", jumat: "OFF", sabtu: "09.00 - 14.00" } },
+                    { poli: "👶 Poli KIA", doctor: "Suci Febriyanti, A.Md.Keb", shifts: { senin: "17.00 - 21.00", selasa: "09.00 - 16.00", rabu: "17.00 - 21.00", kamis: "09.00 - 16.00", jumat: "17.00 - 21.00", sabtu: "09.00 - 16.00" } },
+                    { poli: "👶 Poli KIA", doctor: "Tiyas Anggraeni, A.Md.Keb", shifts: { senin: "OFF", selasa: "17.00 - 21.00", rabu: "OFF", kamis: "17.00 - 21.00", jumat: "OFF", sabtu: "17.00 - 21.00" } },
+                    { poli: "✨ Layanan Lain", doctor: "Suntik KB, Khitan, Suntik Vit, Home Visit", shifts: { senin: "Sesuai Jadwal", selasa: "Sesuai Jadwal", rabu: "Sesuai Jadwal", kamis: "Sesuai Jadwal", jumat: "Sesuai Jadwal", sabtu: "Sesuai Jadwal" } }
+                ],
+                testimonials: [
+                    { name: "Hendi Pratama", rating: "★★★★★", date: "2 Minggu Lalu", text: "Poli giginya modern sekali, bersih and dokternya sangat profesional. Sangat puas dengan layanan disini." },
+                    { name: "Larasati Dewi", rating: "★★★★★", date: "1 Bulan Lalu", text: "Pelayanan pendaftarannya rapi dan teratur, tidak perlu antre lama karena sudah reservasi lewat WhatsApp." }
+                ]
+            },
+            semarang: {
+                title: "Klinik Pratama Cita Sehat Semarang",
+                badge: "Cabang Semarang (Jawa Tengah)",
+                address: "Lamper Lor, Semarang Selatan, Semarang City, Central Java 50242",
+                whatsapp: "625786555595",
+                mapLink: "https://www.google.com/maps/search/?api=1&query=Klinik+Pratama+Cita+Sehat+Semarang+Lamper+Lor+Semarang+Selatan+Semarang+City+Central+Java+50242",
+                images: [
+                    "https://klinik.citasehat.org/wp-content/uploads/2026/10/Semarang-3.jpeg",
+                    "https://klinik.citasehat.org/wp-content/uploads/2026/10/Poli-Gigi.jpeg",
+                    "https://klinik.citasehat.org/wp-content/uploads/2026/10/Poli-Umum_Dokter.jpeg",
+                    "https://klinik.citasehat.org/wp-content/uploads/2026/10/ruang-tunggu.jpeg"
+                ],
+                doctors: [
+                    { name: "dr. Thina Maulida", role: "Dokter Umum Utama", desc: "Berdedikasi tinggi dalam mendampingi pasien harian dan penanganan awal cedera/penyakit umum." },
+                    { name: "dr. Khuoulah Hanifah", role: "Dokter Umum", desc: "Pemeriksaan kesehatan berkala, evaluasi medis, dan konsultasi kesehatan keluarga." },
+                    { name: "dr. Canggih", role: "Dokter Umum (Jadwal Sore)", desc: "Pelayanan medis umum fokus jadwal sore dan akhir pekan." },
+                    { name: "drg. Armitha Hapsari", role: "Dokter Gigi", desc: "Spesialis perawatan estetika karang gigi, scaling, dan pencabutan gigi." },
+                    { name: "Uswatun Hasanah, Am.Keb", role: "Bidan (Poli KIA)", desc: "Pemeriksaan kehamilan dasar, konsultasi kehamilan sehat, dan imunisasi bayi." }
+                ],
+                schedules: [
+                    { poli: "🩺 Poli Umum", doctor: "dr. Thina Maulida", shifts: { senin: "08.30 - 16.00", selasa: "08.30 - 16.00", rabu: "08.30 - 16.00", kamis: "08.30 - 16.00", jumat: "08.30 - 16.00", sabtu: "08.30 - 16.00" } },
+                    { poli: "🩺 Poli Umum", doctor: "dr. Khuoulah Hanifah", shifts: { senin: "16.00 - 20.00", selasa: "16.00 - 20.00", rabu: "OFF", kamis: "16.00 - 20.00", jumat: "OFF", sabtu: "OFF" } },
+                    { poli: "🩺 Poli Umum", doctor: "dr. Exviana Putri", shifts: { senin: "OFF", selasa: "OFF", rabu: "OFF", kamis: "OFF", jumat: "OFF", sabtu: "08.30 - 16.00" } },
+                    { poli: "🩺 Poli Umum", doctor: "dr. Aliza Ayu P", shifts: { senin: "OFF", selasa: "OFF", rabu: "16.00 - 20.00", kamis: "OFF", jumat: "OFF", sabtu: "OFF" } },
+                    { poli: "🩺 Poli Umum", doctor: "dr. Canggih", shifts: { senin: "OFF", selasa: "OFF", rabu: "OFF", kamis: "OFF", jumat: "16.00 - 20.00", sabtu: "16.00 - 20.00" } },
+                    { poli: "🏥 Perawat", doctor: "Ns. Muntiaroh, S.Kep", shifts: { senin: "08.30 - 16.00", selasa: "08.30 - 16.00", rabu: "08.30 - 15.00", kamis: "08.30 - 15.00", jumat: "08.30 - 15.00", sabtu: "08.30 - 15.00" } },
+                    { poli: "🦷 Poli Gigi", doctor: "drg. Armitha Hapsari", shifts: { senin: "16.00 - 20.00", selasa: "16.00 - 20.00", rabu: "16.00 - 20.00", kamis: "16.00 - 20.00", jumat: "16.00 - 20.00", sabtu: "16.00 - 20.00" } },
+                    { poli: "🦷 Poli Gigi", doctor: "drg. Febrianto Dwilaksono", shifts: { senin: "Dengan Perjanjian", selasa: "Dengan Perjanjian", rabu: "Dengan Perjanjian", kamis: "Dengan Perjanjian", jumat: "Dengan Perjanjian", sabtu: "Dengan Perjanjian" } },
+                    { poli: "👶 Poli KIA", doctor: "Uswatun Hasanah, Am.Keb", shifts: { senin: "08.00 - 15.00", selasa: "08.00 - 15.00", rabu: "08.00 - 15.00", kamis: "08.00 - 15.00", jumat: "08.00 - 15.00", sabtu: "08.00 - 15.00" } }
+                ],
+                testimonials: [
+                    { name: "Nadiya Nisa", rating: "★★★★★", date: "3 Minggu Lalu", text: "Rumah saya jauh, tapi saya memilih faskes disini, karena tidak antri, layanan lengkap, mudah, dan dokter nya cocok." },
+                    { name: "Budi Prasetyo", rating: "★★★★★", date: "2 Bulan Lalu", text: "Dokter umumnya ramah dan penjelasannya mudah dipahami. Klinik bersih dan parkirnya luas." }
+                ]
+            },
+            yogyakarta: {
+                title: "Klinik Pratama Cita Sehat Yogyakarta",
+                badge: "Cabang Yogyakarta (DI Yogyakarta)",
+                address: "Jl. Pleret, Dusun Trayeman RT.02, Pleret, Bantul, Yogyakarta",
+                whatsapp: "6285868580799",
+                mapLink: "https://www.google.com/maps/search/?api=1&query=Klinik+Pratama+Cita+Sehat+Yogyakarta+Jl.+Pleret+Dusun+Trayeman+RT.02+Pleret+Bantul+Yogyakarta",
+                images: [
+                    "https://klinik.citasehat.org/wp-content/uploads/2026/10/Yogya-3.jpeg",
+                    "https://klinik.citasehat.org/wp-content/uploads/2026/10/IMG_20240808_132359.jpg",
+                    "https://klinik.citasehat.org/wp-content/uploads/2026/10/IMG_20240808_132551.jpg",
+                    "https://klinik.citasehat.org/wp-content/uploads/2026/10/IMG_20240808_135027.jpg"
+                ],
+                doctors: [
+                    { name: "dr. Shasia Rezky Purnomo", role: "Dokter Umum Utama", desc: "Fokus pada pelayanan promotif, preventif, serta pengobatan medis dasar komprehensif." },
+                    { name: "dr. Agus Ernani", role: "Dokter Umum", desc: "Penanganan keluhan fisik harian, pemeriksaan fisik rutin, dan edukasi kesehatan keluarga." },
+                    { name: "drg. Isti Noor Masita", role: "Dokter Gigi", desc: "Perawatan restorasi estetika gigi patah, pembersihan karang, dan perawatan gigi." },
+                    { name: "drg. Dextravia", role: "Dokter Gigi", desc: "Perawatan gigi mulut, pembersihan plak, dan konsultasi kesehatan gigi anak." }
+                ],
+                schedules: [
+                    { poli: "🩺 Poli Umum", doctor: "dr. Shasia Rezky Purnomo", shifts: { senin: "08.00 - 20.00", selasa: "14.00 - 20.00", rabu: "08.00 - 14.00", kamis: "14.00 - 20.00", jumat: "14.00 - 20.00", sabtu: "08.00 - 14.00" } },
+                    { poli: "🩺 Poli Umum", doctor: "dr. Agus Ernani", shifts: { senin: "OFF", selasa: "08.00 - 14.00", rabu: "14.00 - 20.00", kamis: "08.00 - 14.00", jumat: "08.00 - 14.00", sabtu: "14.00 - 20.00" } },
+                    { poli: "🦷 Poli Gigi", doctor: "drg. Isti Noor Masita", shifts: { senin: "08.00 - 14.00", selasa: "OFF", rabu: "08.00 - 14.00", kamis: "OFF", jumat: "08.00 - 14.00", sabtu: "OFF" } },
+                    { poli: "🦷 Poli Gigi", doctor: "drg. Dextravia", shifts: { senin: "OFF", selasa: "14.00 - 20.00", rabu: "OFF", kamis: "14.00 - 20.00", jumat: "OFF", sabtu: "08.00 - 14.00" } },
+                    { poli: "🏥 Perawat & Asisten", doctor: "Ulfa Nadia (Perawat)", shifts: { senin: "09.00 - 13.00", selasa: "OFF", rabu: "OFF", kamis: "09.00 - 13.00", jumat: "OFF", sabtu: "09.00 - 13.00" } },
+                    { poli: "🦷 Asisten Gigi", doctor: "Wulandari", shifts: { senin: "09.00 - 13.00", selasa: "OFF", rabu: "09.00 - 13.00", kamis: "OFF", jumat: "09.00 - 13.00", sabtu: "OFF" } },
+                    { poli: "🦷 Asisten Gigi", doctor: "Laely Aisyah", shifts: { senin: "OFF", selasa: "OFF", rabu: "OFF", kamis: "OFF", jumat: "OFF", sabtu: "08.00 - 14.00" } }
+                ],
+                testimonials: [
+                    { name: "Kintan Elsa", rating: "★★★★★", date: "2 Bulan Lalu", text: "Pemeriksaan kehamilan di Poli KIA sangat memuaskan, bidannya komunikatif and memberikan saran gizi yang sangat bermanfaat." },
+                    { name: "Ahmad Yusuf", rating: "★★★★★", date: "3 Bulan Lalu", text: "Pelayanan medis yang lengkap untuk keluarga saya. Dokter giginya telaten dan sabar menangani anak saya." }
+                ]
+            },
+            surabaya: {
+                title: "Klinik Pratama Cita Sehat Surabaya",
+                badge: "Cabang Surabaya (Jawa Timur)",
+                address: "Jl. Sidosermo II No.321, Sidosermo, Kec. Wonocolo, Surabaya, Jawa Timur 60239",
+                whatsapp: "6281231666192",
+                mapLink: "https://www.google.com/maps/search/?api=1&query=Klinik+Pratama+Cita+Sehat+Surabaya+Jl.+Sidosermo+II+No.321+Sidosermo+Kec.+Wonocolo+Surabaya+Jawa+Timur+60239",
+                images: [
+                    "https://klinik.citasehat.org/wp-content/uploads/2026/10/Surabaya.jpg",
+                    "https://klinik.citasehat.org/wp-content/uploads/2026/10/8.-NS-2.jpg",
+                    "https://klinik.citasehat.org/wp-content/uploads/2026/10/8.-Poli-Gigi-2.jpg",
+                    "https://klinik.citasehat.org/wp-content/uploads/2026/10/8.-RMFO-2.jpg"
+                ],
+                doctors: [
+                    { name: "Dr. Budi Santoso", role: "Dokter Umum Utama", desc: "Berpengalaman 10+ tahun dalam manajemen keluhan akut dan kronis pada pelayanan primer." },
+                    { name: "Drg. Mega Utami", role: "Dokter Gigi", desc: "Pencegahan karies gigi dini, scalling rutin, penambalan komposit resin sewarna gigi." },
+                    { name: "Bidan Kartini", role: "Bidan (Poli KIA)", desc: "Pemantauan gizi dan tumbuh kembang anak, imunisasi campak dan polio, serta pelayanan KB." }
+                ],
+                testimonials: [
+                    { name: "Sirin Kaila", rating: "★★★★★", date: "3 Bulan Lalu", text: "Tempatnya nyaman, orangnya ramah, sopan santun dan memberi senyuman dengan tulus dalam melayani saya." },
+                    { name: "Roni Setiawan", rating: "★★★★★", date: "1 Bulan Lalu", text: "Klinik langganan keluarga. Dokternya selalu memberikan saran pencegahan penyakit yang bagus." }
+                ]
+            }
+        };
+
+        // Global Image Carousel Controllers
+        let currentSlide = 0;
+        let totalSlides = 0;
+
+        function showSlide(index) {
+            const wrapper = document.getElementById('carouselWrapper');
+            if (!wrapper) return;
+            
+            if (index >= totalSlides) {
+                currentSlide = 0;
+            } else if (index < 0) {
+                currentSlide = totalSlides - 1;
+            } else {
+                currentSlide = index;
+            }
+
+            wrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+            // Update dots active class
+            document.querySelectorAll('.carousel-dot').forEach((dot, idx) => {
+                if (idx === currentSlide) {
+                    dot.className = "carousel-dot w-6 h-2 rounded-full bg-emerald-600 transition-all duration-300";
+                } else {
+                    dot.className = "carousel-dot w-2 h-2 rounded-full bg-slate-300 hover:bg-slate-400 transition-all duration-300 cursor-pointer";
+                }
+            });
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+
+        // Global switchTab function (smooth scroll to targeted section)
+        function switchTab(tabId) {
+            const element = document.getElementById(`sec-${tabId}`);
+            if (element) {
+                // Offset for stacked sticky headers: header (~80px) + tab bar (~55px) = 135px (or 120px on mobile)
+                const isMobile = window.innerWidth < 640;
+                const offset = isMobile ? 120 : 135;
+                const bodyRect = document.body.getBoundingClientRect().top;
+                const elementRect = element.getBoundingClientRect().top;
+                const elementPosition = elementRect - bodyRect;
+                const offsetPosition = elementPosition - offset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        }
+
+        // Router initialization
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const cabang = urlParams.get('cabang');
+
+            if (!cabang || !clinicsDB[cabang]) {
+                window.location.href = '/';
+                return;
+            }
+
+            const data = clinicsDB[cabang];
+
+            // Render Dynamic details
+            document.getElementById('clinicTitle').innerText = data.title;
+            document.getElementById('clinicAddress').innerHTML = `<span class="text-xl">📍</span> <span>${data.address}</span>`;
+            document.getElementById('btnMapDirection').href = data.mapLink;
+            document.getElementById('btnInstagramBranch').href = data.instagram || '#';
+            
+            // Render Carousel Images & Indicators
+            const carouselWrapper = document.getElementById('carouselWrapper');
+            const carouselDots = document.getElementById('carouselDots');
+            carouselWrapper.innerHTML = '';
+            carouselDots.innerHTML = '';
+            
+            totalSlides = data.images.length;
+            currentSlide = 0;
+
+            data.images.forEach((imgSrc, idx) => {
+                // Add Image Slide
+                const slide = `
+                    <div class="w-full h-full shrink-0">
+                        <img src="${imgSrc}" alt="Foto ${data.title}" class="w-full h-full object-cover">
+                    </div>
+                `;
+                carouselWrapper.innerHTML += slide;
+
+                // Add Dot Indicator
+                const activeClass = idx === 0 ? "w-6 h-2 bg-emerald-600" : "w-2 h-2 bg-slate-300 hover:bg-slate-400";
+                const dot = `
+                    <button onclick="showSlide(${idx})" class="carousel-dot ${activeClass} rounded-full transition-all duration-300 cursor-pointer" aria-label="Slide ${idx + 1}"></button>
+                `;
+                carouselDots.innerHTML += dot;
+            });
+
+            showSlide(0);
+            
+            // Populate Dynamic Description in Fasilitas Tab
+            const descHtml = `
+                <p>${data.title} ini dirancang dengan suasana hangat dan cozy agar pasien merasa lebih rileks selama menjalani perawatan. Didukung oleh dokter dan staf profesional, pasien akan mendapat layanan terbaik sekaligus edukasi yang tepat, mulai dari pemeriksaan kesehatan umum, perawatan gigi, hingga layanan KIA, sehingga pengalaman perawatan medis terasa nyaman dengan biaya yang tetap terjangkau.</p>
+                <p>Untuk memudahkan layanan bersama tim medis ${data.title}, kami menyediakan integrasi pemesanan janji temu secara digital sehingga pasien dapat dengan mudah memilih jadwal dan dokter sesuai kebutuhan. Proses booking dapat dilakukan langsung melalui WhatsApp secara cepat dan praktis, serta didukung fasilitas medis modern untuk menghadirkan perawatan yang lebih transparan.</p>
+                <p class="font-semibold text-emerald-800">Sebelum gangguan kesehatan muncul dan mengganggu aktivitas Anda, sebaiknya segera jadwalkan pemeriksaan berkala bersama tim medis pilihan Anda di cabang ini.</p>
+            `;
+            document.getElementById('facilityDescription').innerHTML = descHtml;
+
+            // Render Doctor cards
+            const doctorList = document.getElementById('doctorList');
+            doctorList.innerHTML = '';
+            data.doctors.forEach((doc, idx) => {
+                const card = `
+                    <div class="flex gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-100 hover:border-emerald-200 transition-colors">
+                        <div class="w-12 h-12 rounded-full bg-emerald-100 flex items-center justify-center font-bold text-emerald-800 text-lg shrink-0">
+                            ${doc.role.includes("Dokter Gigi") ? "🦷" : (doc.role.includes("Bidan") ? "👶" : "🩺")}
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-base">${doc.name}</h4>
+                            <p class="text-xs text-emerald-700 font-extrabold uppercase tracking-wider mb-1">${doc.role}</p>
+                            <p class="text-xs sm:text-sm text-slate-500 leading-relaxed font-medium">${doc.desc}</p>
+                        </div>
+                    </div>
+                `;
+                doctorList.innerHTML += card;
+            });
+
+            // Render Weekly Schedule Table
+            const scheduleTableBody = document.getElementById('scheduleTableBody');
+            if (scheduleTableBody) {
+                scheduleTableBody.innerHTML = '';
+                if (data.schedules && data.schedules.length > 0) {
+                    data.schedules.forEach(item => {
+                        const formatShift = (val) => {
+                            if (!val || val === "") return `<span class="text-slate-300 font-normal">-</span>`;
+                            const clean = val.trim();
+                            if (clean.toUpperCase() === "OFF") {
+                                return `<span class="inline-block px-2 py-0.5 rounded-full text-[11px] font-semibold bg-rose-50 text-rose-600 border border-rose-100">OFF</span>`;
+                            }
+                            if (clean.toLowerCase().includes("perjanjian")) {
+                                return `<span class="inline-block px-2 py-0.5 rounded-full text-[11px] font-semibold bg-sky-50 text-sky-700 border border-sky-100">Perjanjian</span>`;
+                            }
+                            if (clean === "24 Jam") {
+                                return `<span class="inline-block px-2 py-0.5 rounded-full text-[11px] font-bold bg-amber-50 text-amber-700 border border-amber-200">24 Jam</span>`;
+                            }
+                            if (clean.toLowerCase().includes("bidan")) {
+                                return `<span class="inline-block px-2 py-0.5 rounded-full text-[11px] font-semibold bg-purple-50 text-purple-700 border border-purple-100">Sesuai Bidan</span>`;
+                            }
+                            if (clean.toLowerCase().includes("jadwal")) {
+                                return `<span class="inline-block px-2 py-0.5 rounded-full text-[11px] font-semibold bg-teal-50 text-teal-700 border border-teal-100">Sesuai Jadwal</span>`;
+                            }
+                            return `<span class="inline-block px-2 py-0.5 rounded-full text-[11px] font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200/60">${clean}</span>`;
+                        };
+
+                        const row = `
+                            <tr class="hover:bg-slate-50/80 transition-colors">
+                                <td class="py-3 px-4">
+                                    <div class="font-bold text-slate-900 text-xs sm:text-sm">${item.doctor}</div>
+                                    <div class="text-[11px] text-emerald-700 font-medium">${item.poli}</div>
+                                </td>
+                                <td class="py-3 px-2 text-center">${formatShift(item.shifts.senin)}</td>
+                                <td class="py-3 px-2 text-center">${formatShift(item.shifts.selasa)}</td>
+                                <td class="py-3 px-2 text-center">${formatShift(item.shifts.rabu)}</td>
+                                <td class="py-3 px-2 text-center">${formatShift(item.shifts.kamis)}</td>
+                                <td class="py-3 px-2 text-center">${formatShift(item.shifts.jumat)}</td>
+                                <td class="py-3 px-2 text-center">${formatShift(item.shifts.sabtu)}</td>
+                            </tr>
+                        `;
+                        scheduleTableBody.innerHTML += row;
+                    });
+                } else {
+                    scheduleTableBody.innerHTML = `
+                        <tr>
+                            <td colspan="7" class="py-6 text-center text-slate-500 font-normal">
+                                ℹ️ Informasi jadwal dokter untuk cabang ini dapat dikonfirmasi langsung melalui layanan pendaftaran WhatsApp.
+                            </td>
+                        </tr>
+                    `;
+                }
+            }
+
+            // Render Dynamic Testimonials in Testimoni Tab
+            const branchTestimonialList = document.getElementById('branchTestimonialList');
+            branchTestimonialList.innerHTML = '';
+            data.testimonials.forEach(testi => {
+                const card = `
+                    <div class="bg-slate-50 border border-slate-100 hover:border-emerald-200 transition-colors p-6 rounded-3xl text-left space-y-3">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm sm:text-base">${testi.name}</h4>
+                                <span class="text-[10px] sm:text-xs text-slate-500 font-medium">${testi.date}</span>
+                            </div>
+                            <span class="text-teal-700 text-base sm:text-lg font-bold">${testi.rating}</span>
+                        </div>
+                        <p class="text-slate-600 text-xs sm:text-sm leading-relaxed font-normal">${testi.text}</p>
+                    </div>
+                `;
+                branchTestimonialList.innerHTML += card;
+            });
+
+            // Show Content, Hide Loader
+            document.getElementById('loadingState').classList.add('hidden');
+            document.getElementById('clinicContent').classList.remove('hidden');
+
+            // Handle main booking button click
+            document.getElementById('btnMainBooking').addEventListener('click', () => {
+                const msg = `Halo ${data.title}, saya ingin menanyakan info layanan dan pendaftaran appointment online.`;
+                window.open(`https://wa.me/${data.whatsapp}?text=${msg}`, '_blank');
+            });
+
+            // Scrollspy logic to auto-highlight tab buttons on scroll
+            const sections = document.querySelectorAll('.scrollspy-section');
+            const navButtons = document.querySelectorAll('.tab-btn');
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '-135px 0px -55% 0px', // Adjusted to match the combined stacked sticky offset
+                threshold: 0
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const id = entry.target.id.replace('sec-', '');
+                        
+                        // Reset all tab button styles
+                        navButtons.forEach(btn => {
+                            btn.className = "tab-btn border-b-2 border-transparent py-4 px-1 text-sm font-bold text-slate-500 hover:text-slate-700 hover:border-slate-300 transition-all cursor-pointer";
+                        });
+                        
+                        // Set active style for the intersecting tab
+                        const activeBtn = document.getElementById(`tab-${id}`);
+                        if (activeBtn) {
+                            activeBtn.className = "tab-btn border-b-2 border-emerald-600 py-4 px-1 text-sm font-extrabold text-emerald-700 transition-all cursor-pointer";
+                        }
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => observer.observe(section));
+        });
+    </script>
+</body>
+</html>
